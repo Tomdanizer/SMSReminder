@@ -15,7 +15,7 @@ django-widget-tweaks==1.3
 gunicorn==18.0
 itty==0.8.2
 kombu==3.0.14
-parsedatetime==git+https://github.com/bear/parsedatetime.git
+parsedatetime==./parsedatetime
 psycopg2==2.5.2
 python-dateutil==2.2
 pytz==2014.2
