@@ -74,6 +74,7 @@ def blocknumber(request):
 def delete_messages(request):
   c = {}
   c.update(csrf(request))
+  user = request.user
   if request.method == 'POST': # If the form has been submitted...
     for key, value in request.POST.iteritems():
       if value == "on":
