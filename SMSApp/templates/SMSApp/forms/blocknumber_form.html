@@ -1,0 +1,18 @@
+{% load staticfiles %}
+{% load webdesign %}
+{% load widget_tweaks %}
+{% block blocknumber_form_section %}
+      <div class="col-md-4">
+       <form role="form" action="/SMSApp/blocknumber_confirm/" method='post'>{% csrf_token %}
+            {{ blacklistform.non_field_errors }}
+            <div class="fieldWrapper">
+                {{ blacklistform.subject.errors }}
+                <label for="phone_number">Enter a number to be blocked</label>
+                {{ blacklistform.blacklist_phone_number|attr:"type:tel" |attr:"placeholder:(888) 123-4567   or   888-123-4567   or   888 123 4567   or   8881234567"|add_class:"form-control" }}
+            </div>
+            <div class="div-button-center">
+                    <button type="submit" class="btn btn-primary btn-lg center-button">Block it!</button>
+            </div>
+          </form>
+      </div> 
+{% endblock blocknumber_form_section %}

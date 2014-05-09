@@ -1,0 +1,23 @@
+
+{% block blacklist_section %}
+<div id="blacklist" class="row section blacklist-section">
+  <div class="container">
+    <div class="row">
+      <h1>Need a number blocked?</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <h4>
+          <p>Simply enter a phone number in the field below and that number will no longer recieve any more messages from SMSApp</p>
+          <p>Reasons for this could be someone is sending unwanted messages to a phone number that is not their own.</p>
+        </h4>
+      </div>
+  {% block blocknumber_form_section %}
+    {% include "SMSApp/forms/blocknumber_form.html" %}
+  {% endblock blocknumber_form_section %}
+      <div class="col-md-4">
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock blacklist_section %}

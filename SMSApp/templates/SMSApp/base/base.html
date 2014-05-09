@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+   <link rel="stylesheet" href="{% static 'SMSApp/css/bootstrap-datetimepicker.min.css' %}" />
+    <title>The Amazing BigBoomBob</title>
+</head>
+
+<body>
+  <header class="navbar-inverse hero top-row" role="banner">
+            <nav class="navbar navbar-default navbar-fixed-top menu-row" role="navigation">
+                <div class="container">
+                 
+                    <div class="navbar-header smsapp-logo">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#smsapp-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">SMSApp</a>
+                    </div>
+            
+                    <div class="collapse navbar-collapse" id="smsapp-menu">
+                      <ul class="nav navbar-nav navbar-right ">
+                        {% block main_menu %}
+
+                        {% endblock main_menu %}
+
+                        {% block user_menu %}
+
+                        {% endblock user_menu %}
+                      </ul>
+                     </div><!-- /.navbar-collapse -->
+                </div>
+              </nav>
+  </header>
+
+  <div id="content">
+    <div class="container-fluid">
+        {% block content %}
+        {% endblock content%}
+    </div>
+  </div>
+  <div class="container-fluid">
+{#    <div id="footer" class="row section footer-section">#}
+{#      <div class="container">#}
+{#      </div>#}
+{#    </div>#}
+  </div>
+    <link rel="stylesheet" type="text/css" href="{% static 'SMSApp/styles.css' %}" /> 
+    <link rel="stylesheet" type="text/css" href="{% static 'animate.css' %}" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="{% static 'SMSApp/js/moment.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'SMSApp/js/bootstrap-datetimepicker.min.js' %}"></script>
+    <script src="{% static 'SMSApp/index.js' %}"></script>
+     
+</body>
+</html>

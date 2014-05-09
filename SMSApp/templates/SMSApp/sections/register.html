@@ -1,0 +1,32 @@
+{% extends "SMSApp/base/base.html" %}
+{% load staticfiles %}
+{% load webdesign %}
+
+<!-- MAIN MENU -->
+{% block main_menu %}
+    {% include "SMSApp/sections/menu.html" %}
+{% endblock main_menu %}
+
+<!-- USER MENU -->
+{% block user_menu %}
+   {% include "SMSApp/user/user_menu.html" %}
+{% endblock user_menu %}
+
+<!-- USER CONTROL CONTENT -->
+{% block content %}
+      <!-- MESSAGES SECTION -->
+  {% block message_section %}
+    {% include "SMSApp/base/messages.html" %}
+  {% endblock message_section %}
+<div id="register" class="section register-section">
+  <div class="row text-center">
+    <h1>Get registered now!</h1>
+  </div>
+  <div class="col-md-4">
+  </div>
+  {% include "SMSApp/forms/register_form.html" %}
+    <div class="col-md-4">
+    </div>
+  
+</div>
+{% endblock content %}

@@ -1,0 +1,57 @@
+{% load webdesign %}
+{% load staticfiles %}
+{% block about_section %}
+<div id="about" class="row section about-section">
+  <div class="container">
+     <!-- First row -->
+    <div class="row">
+      <h1>What is it?</h1>
+      <div class="col-md-6">
+        <h4>
+          <p>SMS app is here to help remind you!</p>
+          <p>More specifically, its a tool that allows the creation of instant one-time or scheduled reminders. All of which are delivered directly to your phone at the time you specify.</p>
+        </h4>
+      </div>
+      <div class="col-md-6">
+        <img class="questionmark q1 questionfloat" src="{% static 'SMSApp/images/questionmark.png' %}"/>
+        <img class="questionmark q2 questionfloat2" src="{% static 'SMSApp/images/questionmark.png' %}"/>
+        <img class="questionmark q3 questionfloat3" src="{% static 'SMSApp/images/questionmark.png' %}"/>
+        <img class="questionmark q4 questionfloat4" src="{% static 'SMSApp/images/questionmark.png' %}"/>
+        <img class="stickfigure" src="{% static 'SMSApp/images/stickfigure.png' %}"/>
+      </div>
+    </div>
+     <!-- End first row -->
+     <!-- Second row -->
+    <div class="row sub-section">
+      <h1>How does it work?</h1>
+      <div class="col-md-6">
+        <h4>
+          <p>It is as simple as 3 steps!</p>
+          <p>Step 1: Enter your phone number or a friends phone number that you need to remind.</p>
+          <p>Step 2: Select a date or time to be reminded.</p>
+          <p>Step 3: Enter your reminder!</p>
+          <p>Click the button and you're done!</p>
+        </h4>
+      </div>
+      <div class="col-md-6">
+        {% lorem 2 p %}
+      </div>
+    </div> 
+    <!-- End Second row -->
+    <!-- Third row -->
+    <div class="row sub-section">
+      <h1>Is it Free?</h1>
+      <div class="col-md-6">
+        <h4>
+          <p>YES!</p>
+          <p>Our service is FREE to use. If you sign up there are even tons more features available for you!</p>
+        </h4>
+      </div>
+      <div class="col-md-6">
+        <img src="{% static 'SMSApp/images/features.png' %}"/>
+      </div>
+    </div>
+    <!-- End Third row -->
+  </div>
+</div>
+{% endblock about_section %}

@@ -1,0 +1,16 @@
+application: tomdanizersms
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+env_variables:
+    DJANGO_SETTINGS_MODULE: 'SMSReminder.settings'
+
+libraries:
+- name: django
+  version: "latest"
+
+builtins:
+- django_wsgi: on
+

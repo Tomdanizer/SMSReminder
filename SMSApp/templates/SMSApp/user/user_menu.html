@@ -1,0 +1,17 @@
+{% block user_menu %}
+  {% if user.id %}
+    <li class="sign-in">
+      <a href="/SMSApp/{{ user }}/profile">{{ user }}</a>
+    </li> 
+    <li>
+      <a href="/SMSApp/signout">Logout</a>
+    </li> 
+  {% else %}
+    <li class="sign-in">
+      <a class="menulink" href="{% url 'signin' %}">Sign-in</a>
+    </li>
+    <li>
+      <a href="/SMSApp/register">Register</a>
+    </li>
+  {% endif %}
+{% endblock user_menu %}

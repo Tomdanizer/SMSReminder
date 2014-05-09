@@ -1,0 +1,32 @@
+{% load staticfiles %}
+{% load webdesign %}
+{% load widget_tweaks %}
+<div id="profile">
+  <div class="col-md-10 col-md-offset-1">
+
+    <div class="text-center">
+      <h1>Message Queue:</h1>
+    </div>
+        <form role="form" action="/SMSApp/delete_messages/" method='post'>{% csrf_token %}
+          {{ form.non_field_errors }}
+          <table class="table table-striped">
+            <thead>
+              <th>Number</th>
+              <th>Message</th>
+              <th>Time</th>
+              <th>Delete</th>
+            </thead>
+            <tbody>
+              {% for message in messagequeue %}
+              <tr><td>{{forloop.counter0}} </td><td> {{ message.message.text }} </td><td> {{ message.message.time }}</td><td><input type="checkbox" name="{{message.message.uuid}}"/></td></tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <div class="div-button-center">
+            <button class="btn btn-danger btn-lg">Delete Selected Messages</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+</div>

@@ -1,0 +1,53 @@
+{% extends "SMSApp/base/base.html" %}
+<!-- MAIN MENU -->
+{% block main_menu %}
+    {% include "SMSApp/sections/menu.html" %}
+{% endblock main_menu %}
+
+<!-- USER MENU -->
+{% block user_menu %}
+   {% include "SMSApp/user/user_menu.html" %}
+{% endblock user_menu %}
+
+<!-- USER CONTROL CONTENT -->
+{% block content %}
+<div class="row">
+  <div class="col-md-2">
+    <h5>Account Management</h5>
+  </div>
+</div>
+<div class="row">
+  <!-- User Control Menu -->
+  <div class="col-md-2">
+    <ul class="nav nav-pills nav-stacked">
+      <li class="{% ifequal pagetype "profile" %}active{% endifequal %}"><a href="{% url 'user_profile' user %}">Profile</a></li>
+      <li class="{% ifequal pagetype "messages" %}active{% endifequal %}"><a href="{% url 'user_messages' user %}">Messages</a></li>
+      <li class="{% ifequal pagetype "password" %}active{% endifequal %}"><a href="{% url 'user_password' user %}">Change Password</a></li>
+      <li class="{% ifequal pagetype "billing" %}active{% endifequal %}"><a href="{% url 'user_billing' user %}">Billing</a></li>
+    </ul>
+  </div>
+  <!-- User Control Content -->
+  <div class="col-md-10">
+  <!-- MESSAGES SECTION -->
+  {% block message_section %}
+    {% include "SMSApp/base/messages.html" %}
+  {% endblock message_section %}
+
+    {% if pagetype == "profile" %}
+      {% include "SMSApp/user/user_profile.html" %}
+    {% endif %}
+    
+    {% if pagetype == "messages" %}
+      {% include "SMSApp/user/user_messages.html" %}
+    {% endif %}
+    
+    {% if pagetype == "password" %}
+      {% include "SMSApp/user/user_password.html" %}
+    {% endif %}
+    
+    {% if pagetype == "billing" %}
+      {% include "SMSApp/user/user_billing.html" %}
+    {% endif %}
+  </div>
+</div>
+{% endblock content %}

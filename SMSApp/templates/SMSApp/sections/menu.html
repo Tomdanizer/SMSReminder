@@ -1,0 +1,14 @@
+{% block main_menu %}
+                         <li>
+                          <a class="menulink" href="{% url 'index' %}" data-target="home">Home</a>
+                        </li>
+                        <li>
+                          <a class="menulink" href="{% url 'index' %}#about" data-target="about">About</a>
+                        </li>
+                        <li>
+                          <a class="menulink" href="{% url 'index' %}#blacklist" data-target="blacklist">Block a number</a>
+                        </li>
+                        <li>
+                          <a class="menulink" href="{% url 'index' %}#faq" data-target="faq">FAQ</a>
+                        </li>
+{% endblock main_menu %}

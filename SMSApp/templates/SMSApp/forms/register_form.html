@@ -1,0 +1,174 @@
+{% load staticfiles %}
+{% load webdesign %}
+{% load widget_tweaks %}
+
+ <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'SMSApp/styles.css' %}" />
+      <div class="col-md-4">
+       <form role="form" action="/SMSApp/register_confirm/" method='post'>{% csrf_token %}
+            {% if form.non_field_errors %}
+              {% include "SMSApp/base/form_nonfield_errors.html" %}
+            {% endif %}
+
+            <div class="fieldWrapper">
+              {% if form.email.errors %}
+                <div class="form-group has-error has-feedback">
+                  <label for="email">Email -   
+                    {% for err in form.email.errors %}
+                    {{ err }}
+                    {% endfor %}
+                  </label>
+                  {{ form.email|attr:"type:text" |add_class:"form-control" }}
+                   <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+              {% else %}
+                <label for="email">Email:</label>
+                {{ form.email|attr:"type:text" |add_class:"form-control" }}
+              {% endif %}
+            </div>
+
+            <div class="fieldWrapper">
+              {% if form.confirmemail.errors %}
+                <div class="form-group has-error has-feedback">
+                  <label for="email">Confirm email -   
+                    {% for err in form.confirmemail.errors %}
+                    {{ err }}
+                    {% endfor %}
+                  </label>
+                  {{ form.confirmemail|attr:"type:text" |add_class:"form-control" }}
+                   <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+              {% else %}
+                <label for="confirmemail">Confirm email:</label>
+                {{ form.confirmemail|attr:"type:text" |add_class:"form-control" }}
+              {% endif %}
+            </div>
+
+            <div class="fieldWrapper">
+              {% if form.username.errors %}
+                <div class="form-group has-error has-feedback">
+                  <label for="username">Username -
+                    {% for err in form.username.errors %}
+                    {{ err }}
+                    {% endfor %}
+                  </label>
+                  {{ form.username|attr:"type:text" |add_class:"form-control" }}
+                   <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+              {% else %}
+                <label for="username">Username:</label>
+                {{ form.username|attr:"type:text" |add_class:"form-control" }}
+              {% endif %}
+            </div>
+
+            <div class="fieldWrapper">
+              {% if form.password1.errors %}
+                <div class="form-group has-error has-feedback">
+                  <label for="email">Password -   
+                    {% for err in form.password1.errors %}
+                    {{ err }}
+                    {% endfor %}
+                  </label>
+                  {{ form.password1|attr:"type:text" |add_class:"form-control" }}
+                   <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+              {% else %}
+                <label for="password1">Password:</label>
+                {{ form.password1|attr:"type:password" |add_class:"form-control" }}
+              {% endif %}
+            </div>
+
+            <div class="fieldWrapper">
+              {% if form.password2.errors %}
+                <div class="form-group has-error has-feedback">
+                  <label for="email">Confirm password -   
+                    {% for err in form.password2.errors %}
+                    {{ err }}
+                    {% endfor %}
+                  </label>
+                  {{ form.password2|attr:"type:text" |add_class:"form-control" }}
+                   <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+              {% else %}
+                <label for="password2">Confirm password:</label>
+                {{ form.password2|attr:"type:password" |add_class:"form-control" }}
+              {% endif %}
+            </div>
+
+            <div class="fieldWrapper">
+              {% if form.first_name.errors %}
+                <div class="form-group has-error has-feedback">
+                  <label for="email">First Name-   
+                    {% for err in form.first_name.errors %}
+                    {{ err }}
+                    {% endfor %}
+                  </label>
+                  {{ form.first_name|attr:"type:text" |add_class:"form-control" }}
+                   <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+              {% else %}
+                <label for="first_name">First Name:</label>
+                {{ form.first_name|attr:"type:text" |add_class:"form-control" }}
+              {% endif %}
+            </div>
+
+
+            <div class="fieldWrapper">
+              {% if form.last_name.errors %}
+                <div class="form-group has-error has-feedback">
+                  <label for="email">Last Name-   
+                    {% for err in form.last_name.errors %}
+                    {{ err }}
+                    {% endfor %}
+                  </label>
+                  {{ form.last_name|attr:"type:text" |add_class:"form-control" }}
+                   <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+              {% else %}
+                <label for="last_name">Last Name:</label>
+                {{ form.last_name|attr:"type:text" |add_class:"form-control" }}
+              {% endif %}
+            </div>
+
+            <div class="fieldWrapper">
+              {% if form.phone_number.errors %}
+                <div class="form-group has-error has-feedback">
+                  <label for="email">Phone Number -   
+                    {% for err in form.phone_number.errors %}
+                    {{ err }}
+                    {% endfor %}
+                  </label>
+                  {{ form.phone_number|attr:"type:text" |add_class:"form-control" }}
+                   <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+              {% else %}
+                <label for="phone_number">Phone Number:</label>
+                {{ form.phone_number|attr:"type:text" |add_class:"form-control" }}
+              {% endif %}
+            </div>
+
+            <div class="fieldWrapper">
+              {% if form.network.errors %}
+                <div class="form-group has-error has-feedback">
+                  <label for="email">Network -   
+                    {% for err in form.network.errors %}
+                    {{ err }}
+                    {% endfor %}
+                  </label>
+                  {{ form.network|attr:"type:text" |attr:"placeholder:  txt.att.net"|add_class:"hidden form-control" }}
+                   <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                   {% include "SMSApp/sections/network.html" %}
+                </div>
+              {% else %}
+                <label for="message">Network</label>
+                {{ form.network|attr:"type:text" |attr:"placeholder:  txt.att.net"|add_class:"hidden form-control" }}
+                {% include "SMSApp/sections/network.html" %}
+              {% endif %}
+            </div>
+
+               
+            <div class="div-button-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Create my account!</button>
+            </div>
+          </form>
+      </div> 

@@ -1,0 +1,39 @@
+{% extends "SMSApp/base/base.html" %}
+
+<!-- MAIN MENU -->
+{% block main_menu %}
+    {% include "SMSApp/sections/menu.html" %}
+{% endblock main_menu %}
+
+<!-- USER MENU -->
+{% block user_menu %}
+   {% include "SMSApp/user/user_menu.html" %}
+{% endblock user_menu %}
+
+<!-- CONTENT -->
+{% block content %}
+  <!-- MESSAGES SECTION -->
+  {% block message_section %}
+    {% include "SMSApp/base/messages.html" %}
+  {% endblock message_section %}
+  <!-- REMINDER SECTION -->
+  {% block reminder_section %}
+    {% include "SMSApp/sections/reminder.html" %}
+  {% endblock reminder_section %}
+
+  <!-- ABOUT SECTION -->
+  {% block about_section %}
+    {% include "SMSApp/sections/about.html" %}
+  {% endblock about_section %}
+
+  <!-- BLACKLIST SECTION -->
+  {% block blacklist_section %}
+    {% include "SMSApp/sections/blocknumber.html" %}
+  {% endblock blacklist_section %}
+
+  <!-- FAQ SECTION -->
+  {% block faq_section %}
+    {% include "SMSApp/sections/faq.html" %}
+  {% endblock faq_section %}
+
+{% endblock %}

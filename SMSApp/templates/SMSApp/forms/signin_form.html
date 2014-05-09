@@ -1,0 +1,30 @@
+{% load staticfiles %}
+{% load webdesign %}
+{% load widget_tweaks %}
+{% block signin_form_section %}
+      <div class="col-md-4 col-md-offset-4">
+       <form role="form" action="{% url 'signin_confirm' %}" method='post'>{% csrf_token %}
+            {{ signinform.non_field_errors }}
+            <div class="fieldWrapper">
+                {{ signinform.subject.errors }}
+              <label for="username">Username:</label>
+                {{ signinform.username|attr:"type:text" |add_class:"form-control" }}
+            </div>
+            <div class="fieldWrapper">
+                {{ signinform.subject.errors }}
+              <label for="password">Password:</label>
+                {{ signinform.password|attr:"type:password" |add_class:"form-control" }}
+            </div>
+            <div class="fieldWrapper">
+                {{ signinform.subject.errors }}
+              <label for="remember">Remember me:</label>
+                {{ signinform.remember|attr:"type:checkbox" }}
+               <a class="pull-right" href="{% url 'reset' %} ">Forgot Password?</a>
+            </div>
+
+            <div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+            </div>
+          </form>
+      </div> 
+{% endblock signin_form_section %}

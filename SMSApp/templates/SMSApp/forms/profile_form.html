@@ -1,0 +1,38 @@
+{% load staticfiles %}
+{% load webdesign %}
+{% load widget_tweaks %}
+{% block profile_form %}
+      
+       <form role="form" action="/SMSApp/update_profile/" method='post'>{% csrf_token %}
+            {{ form.non_field_errors }}
+            <div class="fieldWrapper">
+                {{ form.subject.errors }}
+              <label for="email">Email:</label>
+                {{ form.email|attr:"type:text" |add_class:"form-control" }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.subject.errors }}
+              <label for="first_name">First Name:</label>
+                {{ form.first_name|attr:"type:text" |add_class:"form-control" }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.subject.errors }}
+              <label for="last_name">Last Name:</label>
+                {{ form.last_name|attr:"type:text" |add_class:"form-control" }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.subject.errors }}
+              <label for="phone_number">Phone Number:</label>
+                {{ form.phone_number|attr:"type:text" |add_class:"form-control" }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.subject.errors }}
+              <label for="phone_number">Network:</label>
+                {{ form.network|attr:"type:text" |add_class:"form-control" }}
+            </div>
+            <div class="div-button-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Save changes</button>
+            </div>
+          </form>
+      
+{% endblock profile_form %}

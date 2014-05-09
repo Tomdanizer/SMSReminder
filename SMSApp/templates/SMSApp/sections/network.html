@@ -1,0 +1,15 @@
+{% load staticfiles %}    
+<div class="carrier-logos clearfix">
+                <span class='carrier-logo'>
+                <img data-carriername='AT&T'  {% if form.network.value == 'txt.att.net' %} class="carrier-selected" {% endif %}  data-carrier='txt.att.net' height='30px' src="{% static 'SMSApp/images/att.png' %}">
+                </span>
+                <span class='carrier-logo'>
+                <img data-carriername='Sprint' {% if form.network.value == 'messaging.sprintpcs.com' %} class="carrier-selected" {% endif %} data-carrier='messaging.sprintpcs.com' height='30px' src="{% static 'SMSApp/images/sprint.png' %}">
+                  </span>
+                  <span class='carrier-logo'>
+                <img data-carriername='T-Mobile' {% if form.network.value == 'tmomail.net' %} class="carrier-selected" {% endif %} data-carrier='tmomail.net' height='30px' src="{% static 'SMSApp/images/tmobile.png' %}">
+                    </span>
+                    <span class='carrier-logo'>
+                <img data-carriername='Verizon' {% if form.network.value == 'vtext.com' %} class="carrier-selected" {% endif %} data-carrier='vtext.com' height='30px' src="{% static 'SMSApp/images/verizon.png' %}">
+                    </span>
+              </div>

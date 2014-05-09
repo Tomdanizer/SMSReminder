@@ -1,0 +1,33 @@
+{% extends "SMSApp/base/base.html" %}
+{% load staticfiles %}
+{% load webdesign %}
+
+<!-- MAIN MENU -->
+{% block main_menu %}
+    {% include "SMSApp/sections/menu.html" %}
+{% endblock main_menu %}
+
+<!-- USER MENU -->
+{% block user_menu %}
+   {% include "SMSApp/user/user_menu.html" %}
+{% endblock user_menu %}
+
+<!-- USER CONTROL CONTENT -->
+{% block content %}
+<!-- MESSAGES SECTION -->
+  {% block message_section %}
+    {% include "SMSApp/base/messages.html" %}
+  {% endblock message_section %}
+
+<div id="signin" class="row section signin-section">
+  <div class="container">
+    <div class="row text-center">
+      <h1>SMS App Sign in</h1>
+    </div>
+    {% block signin_form_section %}
+      {% include "SMSApp/forms/signin_form.html" %}
+    {% endblock signin_form_section %}
+    </div>
+  </div>
+</div>
+{% endblock content %}

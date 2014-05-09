@@ -1,0 +1,9 @@
+            <div class="row">
+                <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                  {% for err in form.non_field_errors %}
+                    <li>{{ err }}</li>
+
+                  {% endfor %}
+              </div>
+            </div>
