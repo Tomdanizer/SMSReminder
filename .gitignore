@@ -1,3 +1,5 @@
-local_settings.py
+
 */migrations/*
-*/*.pyc
+venv
+*.pyc
+staticfiles
