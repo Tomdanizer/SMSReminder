@@ -1,0 +1,2 @@
+web: gunicorn SMSReminder.wsgi
+celery: celery worker -A SMSReminder -B --concurrency=1
