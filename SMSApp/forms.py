@@ -45,7 +45,7 @@ class ReminderForm(forms.Form):
         now = datetime.now()
         seconds = timestamp(time) - timestamp(now)
         print seconds
-        if typeError or valueError or seconds < 0:
+        if typeError or valueError or seconds < -60:
             raise ValidationError("Please enter a valid time format.")
 
         return self.cleaned_data

@@ -247,10 +247,11 @@ def register_confirm(request):
         if form.is_valid(): # All validation rules pass
             email = form.cleaned_data['email']
             username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
+            password = form.cleaned_data['password1']
             first_name = form.cleaned_data['first_name']
             last_name = form.cleaned_data['last_name']
             phone_number = form.cleaned_data['phone_number']
+            logger.debug(phone_number)
             network = form.cleaned_data['network']
             
           

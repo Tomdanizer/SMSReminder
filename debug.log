@@ -8254,3 +8254,325 @@ Not Found: /static/debug_toolbar/js/jquery.cookie.js
 Not Found: /static/debug_toolbar/js/toolbar.js
 Not Found: /static/debug_toolbar/css/toolbar.css
 Not Found: /favicon.ico
+Internal Server Error: /SMSApp/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/staticfiles.py", line 137, in process_response
+    'staticfiles_finders': self.get_staticfiles_finders(),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/staticfiles.py", line 148, in get_staticfiles_finders
+    for path, finder_storage in finder.list([]):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/staticfiles/finders.py", line 106, in list
+    for path in utils.get_files(storage, ignore_patterns):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/staticfiles/utils.py", line 25, in get_files
+    directories, files = storage.listdir(location)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/files/storage.py", line 250, in listdir
+    for entry in os.listdir(path):
+OSError: [Errno 2] No such file or directory: '/home/action/workspace/SMSReminder/SMSReminder/static'
+Not Found: /favicon.ico
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/staticfiles.py", line 137, in process_response
+    'staticfiles_finders': self.get_staticfiles_finders(),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/staticfiles.py", line 148, in get_staticfiles_finders
+    for path, finder_storage in finder.list([]):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/staticfiles/finders.py", line 106, in list
+    for path in utils.get_files(storage, ignore_patterns):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/staticfiles/utils.py", line 25, in get_files
+    directories, files = storage.listdir(location)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/files/storage.py", line 250, in listdir
+    for entry in os.listdir(path):
+OSError: [Errno 2] No such file or directory: '/home/action/workspace/SMSReminder/SMSReminder/static'
+Internal Server Error: /SMSApp/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/staticfiles.py", line 137, in process_response
+    'staticfiles_finders': self.get_staticfiles_finders(),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/staticfiles.py", line 148, in get_staticfiles_finders
+    for path, finder_storage in finder.list([]):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/staticfiles/finders.py", line 106, in list
+    for path in utils.get_files(storage, ignore_patterns):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/staticfiles/utils.py", line 25, in get_files
+    directories, files = storage.listdir(location)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/files/storage.py", line 250, in listdir
+    for entry in os.listdir(path):
+OSError: [Errno 2] No such file or directory: '/home/action/workspace/SMSReminder/SMSReminder/static'
+Not Found: /favicon.ico
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/staticfiles.py", line 137, in process_response
+    'staticfiles_finders': self.get_staticfiles_finders(),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/staticfiles.py", line 148, in get_staticfiles_finders
+    for path, finder_storage in finder.list([]):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/staticfiles/finders.py", line 106, in list
+    for path in utils.get_files(storage, ignore_patterns):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/staticfiles/utils.py", line 25, in get_files
+    directories, files = storage.listdir(location)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/files/storage.py", line 250, in listdir
+    for entry in os.listdir(path):
+OSError: [Errno 2] No such file or directory: '/home/action/workspace/SMSReminder/SMSReminder/static'
+Not Found: /favicon.ico
+Not Found: /static/SMSApp/css/bootstrap-datetimepicker.min.css
+Not Found: /static/SMSApp/images/att.png
+Not Found: /static/SMSApp/styles.css
+Not Found: /static/debug_toolbar/css/toolbar.css
+Not Found: /static/animate.css
+Not Found: /static/SMSApp/js/moment.min.js
+Not Found: /static/SMSApp/js/bootstrap-datetimepicker.min.js
+Not Found: /static/SMSApp/index.js
+Not Found: /static/debug_toolbar/js/jquery.cookie.js
+Not Found: /static/debug_toolbar/js/toolbar.js
+Not Found: /static/SMSApp/images/sprint.png
+Not Found: /static/SMSApp/images/tmobile.png
+Not Found: /static/SMSApp/images/verizon.png
+Not Found: /static/SMSApp/images/questionmark.png
+Not Found: /static/SMSApp/images/stickfigure.png
+Not Found: /static/SMSApp/images/features.png
+Not Found: /favicon.ico
+Not Found: /SMSApp/:5000/static/SMSApp/css/bootstrap-datetimepicker.min.css
+Not Found: /SMSApp/:5000/static/SMSApp/images/att.png
+Not Found: /SMSApp/:5000/static/SMSApp/images/sprint.png
+Not Found: /SMSApp/:5000/static/SMSApp/images/tmobile.png
+Not Found: /SMSApp/:5000/static/SMSApp/images/verizon.png
+Not Found: /SMSApp/:5000/static/SMSApp/images/questionmark.png
+Not Found: /SMSApp/:5000/static/SMSApp/styles.css
+Not Found: /SMSApp/:5000/static/animate.css
+Not Found: /SMSApp/:5000/static/debug_toolbar/css/toolbar.css
+Not Found: /SMSApp/:5000/static/SMSApp/js/moment.min.js
+Not Found: /SMSApp/:5000/static/SMSApp/js/bootstrap-datetimepicker.min.js
+Not Found: /SMSApp/:5000/static/SMSApp/index.js
+Not Found: /SMSApp/:5000/static/debug_toolbar/js/jquery.cookie.js
+Not Found: /SMSApp/:5000/static/debug_toolbar/js/toolbar.js
+Not Found: /SMSApp/:5000/static/SMSApp/images/stickfigure.png
+Not Found: /SMSApp/:5000/static/SMSApp/images/features.png
+Internal Server Error: /SMSApp/register_confirm/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 250, in register_confirm
+    password = form.cleaned_data['password']
+KeyError: 'password'
+Internal Server Error: /SMSApp/register_confirm/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 263, in register_confirm
+    user = User.objects.create(email=email, username=username, first_name=first_name, last_name=last_name, number=phone_number, network=network, messageCount=0)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 157, in create
+    return self.get_queryset().create(**kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 319, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 1511, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 898, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 104, in _record
+    return method(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+DataError: (1406, "Data too long for column 'number' at row 1")
+Internal Server Error: /SMSApp/register_confirm/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 263, in register_confirm
+    user = User.objects.create(email=email, username=username, first_name=first_name, last_name=last_name, number=phone_number, network=network, messageCount=0)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 157, in create
+    return self.get_queryset().create(**kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 319, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 1511, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 898, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 104, in _record
+    return method(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+DataError: (1406, "Data too long for column 'number' at row 1")
+Internal Server Error: /SMSApp/submitsms/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 151, in smsconfirm
+    number=phone_number, network=network, defaults={'count': 1})
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 154, in get_or_create
+    return self.get_queryset().get_or_create(**kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 388, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 380, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 1511, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 898, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 104, in _record
+    return method(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+DataError: (1406, "Data too long for column 'number' at row 1")
+Internal Server Error: /SMSApp/register_confirm/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 264, in register_confirm
+    user = User.objects.create(email=email, username=username, first_name=first_name, last_name=last_name, number=phone_number, network=network, messageCount=0)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 157, in create
+    return self.get_queryset().create(**kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 319, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 1511, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 898, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 104, in _record
+    return method(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+DataError: (1406, "Data too long for column 'number' at row 1")
+Internal Server Error: /SMSApp/submitsms/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 176, in smsconfirm
+    queueMessage(request.user, phone_number, message, time, network)
+  File "/home/action/workspace/SMSReminder/SMSApp/functions.py", line 36, in queueMessage
+    email_Reminder.apply_async((msgQueue.id, msg,number,network), task_id=str(msgQueue.uuid), queue='celery', countdown=int(seconds))
+  File "/home/action/py27env/local/lib/python2.7/site-packages/celery/app/task.py", line 555, in apply_async
+    **dict(self._get_exec_options(), **options)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/celery/app/base.py", line 323, in send_task
+    reply_to=reply_to or self.oid, **options
+  File "/home/action/py27env/local/lib/python2.7/site-packages/celery/app/amqp.py", line 302, in publish_task
+    **kwargs
+  File "/home/action/py27env/local/lib/python2.7/site-packages/kombu/messaging.py", line 168, in publish
+    routing_key, mandatory, immediate, exchange, declare)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/kombu/connection.py", line 461, in _ensured
+    interval_max)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/kombu/connection.py", line 373, in ensure_connection
+    interval_start, interval_step, interval_max, callback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/kombu/utils/__init__.py", line 230, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/kombu/connection.py", line 241, in connect
+    return self.connection
+  File "/home/action/py27env/local/lib/python2.7/site-packages/kombu/connection.py", line 754, in connection
+    self._connection = self._establish_connection()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/kombu/connection.py", line 713, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 111, in establish_connection
+    conn = self.Connection(**opts)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/amqp/connection.py", line 165, in __init__
+    self.transport = create_transport(host, connect_timeout, ssl)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/amqp/transport.py", line 285, in create_transport
+    return TCPTransport(host, connect_timeout)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/amqp/transport.py", line 95, in __init__
+    raise socket.error(last_err)
+error: timed out
