@@ -3,8 +3,8 @@
 {% load staticfiles %}
 
      
-     <div class="col-md-4">
-       <form role="form" action="/SMSApp/submitsms/" method='post'>{% csrf_token %}
+
+       <form id="reminder_form" role="form" action="/SMSApp/submitsms/" method='post'>{% csrf_token %}
             {% if form.non_field_errors %}
               {% include "SMSApp/base/form_nonfield_errors.html" %}
             {% endif %}
@@ -21,7 +21,7 @@
                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
                 </div>
               {% else %}
-                <label for="phone_number">Step 1: Phone Number:</label>
+                <label for="phone_number">Step 1: Phone Number</label>
                 {{ form.phone_number|attr:"type:tel" |attr:"placeholder:(888) 123-4567   or   888-123-4567   or   888 123 4567   or   8881234567"|add_class:"form-control" }}
               {% endif %}
             </div>
@@ -37,9 +37,9 @@
                     {% endfor %}
                   </label>
                   <div id='datetimepicker' class='input-group date ' data-date-format="YYYY-MM-DD hh:mm A">
-                        {{ form.date|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"form-control " }}
-                       <span class="input-group-addon "><span class="glyphicon glyphicon-calendar"></span></span>
+                    {{ form.date2|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"form-control" }}                       <span class="input-group-addon "><span class="glyphicon glyphicon-calendar"></span></span>
                   </div>
+                {{ form.date|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"hidden form-control" }}
                   <span id="date-field-error" class="glyphicon glyphicon-remove form-control-feedback"></span>
                 </div>
 
@@ -47,13 +47,12 @@
 
                 <label for="date">Step 2: Date</label>
                   <div id='datetimepicker' class='input-group date' data-date-format="YYYY-MM-DD hh:mm A">
-                    {{ form.date|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"form-control" }}
-                    <span class="input-group-addon">
+                    {{ form.date2|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"form-control" }}                    <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar">
                         </span>
                     </span>
                   </div>
-
+                    {{ form.date|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"hidden form-control" }}
               {% endif %}
             </div>
 
@@ -95,7 +94,7 @@
             </div>
 
             <div class="div-button-center">
-                    <button type="submit" class="btn btn-primary btn-lg center-button">Remind me!</button>
+                    <button id="remind_me_submit" type="submit" class="btn btn-primary btn-lg center-button">Remind me!</button>
             </div>
           </form>
        <!-- <form role="form">
@@ -116,7 +115,7 @@
           </div>
         </form>
 -->
-      </div>
+
      
 
 {% endblock reminder_form_section %}

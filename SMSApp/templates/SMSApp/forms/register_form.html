@@ -5,7 +5,7 @@
  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="{% static 'SMSApp/styles.css' %}" />
       <div class="col-md-4">
-       <form role="form" action="/SMSApp/register_confirm/" method='post'>{% csrf_token %}
+       <form id="reminder_form" role="form" action="/SMSApp/register_confirm/" method='post'>{% csrf_token %}
             {% if form.non_field_errors %}
               {% include "SMSApp/base/form_nonfield_errors.html" %}
             {% endif %}
@@ -69,7 +69,7 @@
                     {{ err }}
                     {% endfor %}
                   </label>
-                  {{ form.password1|attr:"type:text" |add_class:"form-control" }}
+                  {{ form.password1|attr:"type:password" |add_class:"form-control" }}
                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
                 </div>
               {% else %}
@@ -86,7 +86,7 @@
                     {{ err }}
                     {% endfor %}
                   </label>
-                  {{ form.password2|attr:"type:text" |add_class:"form-control" }}
+                  {{ form.password2|attr:"type:password" |add_class:"form-control" }}
                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
                 </div>
               {% else %}

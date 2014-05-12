@@ -2,7 +2,7 @@
 {% load webdesign %}
 {% load widget_tweaks %}
 {% block blocknumber_form_section %}
-      <div class="col-md-4">
+
        <form role="form" action="/SMSApp/blocknumber_confirm/" method='post'>{% csrf_token %}
             {{ blacklistform.non_field_errors }}
             <div class="fieldWrapper">
@@ -14,5 +14,4 @@
                     <button type="submit" class="btn btn-primary btn-lg center-button">Block it!</button>
             </div>
           </form>
-      </div> 
 {% endblock blocknumber_form_section %}

@@ -8576,3 +8576,843 @@ Traceback (most recent call last):
   File "/home/action/py27env/local/lib/python2.7/site-packages/amqp/transport.py", line 95, in __init__
     raise socket.error(last_err)
 error: timed out
+Internal Server Error: /SMSApp/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 102, in index
+    if not request.user.is_authenticated():
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/functional.py", line 213, in inner
+    self._setup()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/functional.py", line 298, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 18, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 140, in get_user
+    user_id = request.session[SESSION_KEY]
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 301, in get
+    num = len(clone)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 77, in __len__
+    self._fetch_all()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 771, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 82, in as_sql
+    out_cols, s_params = self.get_columns(with_col_aliases)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 227, in get_columns
+    col_aliases)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 302, in get_default_columns
+    r = '%s.%s' % (qn(alias), qn2(field.column))
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 60, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/dummy/base.py", line 15, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+Internal Server Error: /SMSApp/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/staticfiles.py", line 137, in process_response
+    'staticfiles_finders': self.get_staticfiles_finders(),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/staticfiles.py", line 148, in get_staticfiles_finders
+    for path, finder_storage in finder.list([]):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/staticfiles/finders.py", line 106, in list
+    for path in utils.get_files(storage, ignore_patterns):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/staticfiles/utils.py", line 25, in get_files
+    directories, files = storage.listdir(location)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/files/storage.py", line 250, in listdir
+    for entry in os.listdir(path):
+OSError: [Errno 2] No such file or directory: '/home/action/workspace/SMSReminder/SMSReminder/static'
+Internal Server Error: /SMSApp/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 102, in index
+    if not request.user.is_authenticated():
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/functional.py", line 213, in inner
+    self._setup()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/functional.py", line 298, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 18, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 140, in get_user
+    user_id = request.session[SESSION_KEY]
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 301, in get
+    num = len(clone)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 77, in __len__
+    self._fetch_all()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 771, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 82, in as_sql
+    out_cols, s_params = self.get_columns(with_col_aliases)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 227, in get_columns
+    col_aliases)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 302, in get_default_columns
+    r = '%s.%s' % (qn(alias), qn2(field.column))
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 60, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/dummy/base.py", line 15, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+Internal Server Error: /SMSApp/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/staticfiles.py", line 137, in process_response
+    'staticfiles_finders': self.get_staticfiles_finders(),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/staticfiles.py", line 148, in get_staticfiles_finders
+    for path, finder_storage in finder.list([]):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/staticfiles/finders.py", line 106, in list
+    for path in utils.get_files(storage, ignore_patterns):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/staticfiles/utils.py", line 25, in get_files
+    directories, files = storage.listdir(location)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/files/storage.py", line 250, in listdir
+    for entry in os.listdir(path):
+OSError: [Errno 2] No such file or directory: '/home/action/workspace/SMSReminder/SMSReminder/static'
+Not Found: /favicon.ico
+Internal Server Error: /SMSApp/register_confirm/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 268, in register_confirm
+    user = User.objects.create(email=email, username=username, first_name=first_name, last_name=last_name, number=phone_number, network=network, messageCount=0)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 157, in create
+    return self.get_queryset().create(**kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 319, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 1511, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 898, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 104, in _record
+    return method(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1062, "Duplicate entry 'Tomdanizer' for key 'username'")
+Internal Server Error: /SMSApp/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 116, in index
+    'blacklistform' : blacklistform
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/templates/panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 196, in do_block
+    parser.invalid_block_tag(endblock, 'endblock', acceptable_endblocks)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'endblock', expected 'endblock' or 'endblock pricing_section'
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /SMSApp/submitsms/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 151, in smsconfirm
+    if not BlackList.objects.filter(number=phone_number):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 100, in __nonzero__
+    self._fetch_all()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 780, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 45, in cursor
+    return state.Wrapper(connection._djdt_cursor(), connection, panel)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 157, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 129, in _cursor
+    self.ensure_connection()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 124, in ensure_connection
+    self.connect()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 124, in ensure_connection
+    self.connect()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 112, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '0.0.0.0' (111)")
+Internal Server Error: /SMSApp/submitsms/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/request.py", line 47, in process_response
+    for k in sorted(request.session.keys(), key=force_text)]
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 118, in keys
+    return self._session.keys()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 301, in get
+    num = len(clone)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 77, in __len__
+    self._fetch_all()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 780, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 45, in cursor
+    return state.Wrapper(connection._djdt_cursor(), connection, panel)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 157, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 129, in _cursor
+    self.ensure_connection()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 124, in ensure_connection
+    self.connect()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 124, in ensure_connection
+    self.connect()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 112, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '0.0.0.0' (111)")
+Internal Server Error: /SMSApp/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 102, in index
+    if not request.user.is_authenticated():
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/functional.py", line 213, in inner
+    self._setup()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/functional.py", line 298, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 18, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 140, in get_user
+    user_id = request.session[SESSION_KEY]
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 301, in get
+    num = len(clone)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 77, in __len__
+    self._fetch_all()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 780, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 45, in cursor
+    return state.Wrapper(connection._djdt_cursor(), connection, panel)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 157, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 129, in _cursor
+    self.ensure_connection()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 124, in ensure_connection
+    self.connect()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 124, in ensure_connection
+    self.connect()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 112, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '0.0.0.0' (111)")
+Internal Server Error: /SMSApp/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/request.py", line 47, in process_response
+    for k in sorted(request.session.keys(), key=force_text)]
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 118, in keys
+    return self._session.keys()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 301, in get
+    num = len(clone)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 77, in __len__
+    self._fetch_all()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 780, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 45, in cursor
+    return state.Wrapper(connection._djdt_cursor(), connection, panel)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 157, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 129, in _cursor
+    self.ensure_connection()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 124, in ensure_connection
+    self.connect()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 124, in ensure_connection
+    self.connect()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 112, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '0.0.0.0' (111)")
+Internal Server Error: /SMSApp/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 102, in index
+    if not request.user.is_authenticated():
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/functional.py", line 213, in inner
+    self._setup()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/functional.py", line 298, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 18, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 140, in get_user
+    user_id = request.session[SESSION_KEY]
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 301, in get
+    num = len(clone)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 77, in __len__
+    self._fetch_all()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 780, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 45, in cursor
+    return state.Wrapper(connection._djdt_cursor(), connection, panel)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 157, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 129, in _cursor
+    self.ensure_connection()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 124, in ensure_connection
+    self.connect()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 124, in ensure_connection
+    self.connect()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 112, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '0.0.0.0' (111)")
+Internal Server Error: /SMSApp/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/request.py", line 47, in process_response
+    for k in sorted(request.session.keys(), key=force_text)]
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 118, in keys
+    return self._session.keys()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 301, in get
+    num = len(clone)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 77, in __len__
+    self._fetch_all()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 780, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 45, in cursor
+    return state.Wrapper(connection._djdt_cursor(), connection, panel)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 157, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 129, in _cursor
+    self.ensure_connection()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 124, in ensure_connection
+    self.connect()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 124, in ensure_connection
+    self.connect()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 112, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '0.0.0.0' (111)")
+Internal Server Error: /SMSApp/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 102, in index
+    if not request.user.is_authenticated():
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/functional.py", line 213, in inner
+    self._setup()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/functional.py", line 298, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 18, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 140, in get_user
+    user_id = request.session[SESSION_KEY]
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 301, in get
+    num = len(clone)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 77, in __len__
+    self._fetch_all()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 780, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 45, in cursor
+    return state.Wrapper(connection._djdt_cursor(), connection, panel)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 157, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 129, in _cursor
+    self.ensure_connection()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 124, in ensure_connection
+    self.connect()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 124, in ensure_connection
+    self.connect()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 112, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '0.0.0.0' (111)")
+Internal Server Error: /SMSApp/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/request.py", line 47, in process_response
+    for k in sorted(request.session.keys(), key=force_text)]
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 118, in keys
+    return self._session.keys()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 173, in _get_session
+    self._session_cache = self.load()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 20, in load
+    expire_date__gt=timezone.now()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 301, in get
+    num = len(clone)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 77, in __len__
+    self._fetch_all()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 854, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 710, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 780, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 45, in cursor
+    return state.Wrapper(connection._djdt_cursor(), connection, panel)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 157, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 129, in _cursor
+    self.ensure_connection()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 124, in ensure_connection
+    self.connect()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 124, in ensure_connection
+    self.connect()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/__init__.py", line 112, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 435, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '0.0.0.0' (111)")
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /SMSApp/submitsms/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 153, in smsconfirm
+    number=phone_number, network=network, defaults={'count': 1})
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 154, in get_or_create
+    return self.get_queryset().get_or_create(**kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 388, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 380, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 1511, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 898, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 104, in _record
+    return method(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1062, "Duplicate entry '708-263-7890' for key 'number'")
+Internal Server Error: /SMSApp/submitsms/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 153, in smsconfirm
+    number=phone_number, network=network, defaults={'count': 1})
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 154, in get_or_create
+    return self.get_queryset().get_or_create(**kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 388, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 380, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 1511, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 898, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 104, in _record
+    return method(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1062, "Duplicate entry '708-263-7890' for key 'number'")
+Internal Server Error: /SMSApp/submitsms/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 153, in smsconfirm
+    number=phone_number, network=network, defaults={'count': 1})
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 154, in get_or_create
+    return self.get_queryset().get_or_create(**kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 388, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 380, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 1511, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 898, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 104, in _record
+    return method(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1062, "Duplicate entry '708-263-5932' for key 'number'")
+Internal Server Error: /SMSApp/submitsms/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 153, in smsconfirm
+    number=phone_number, network=network, defaults={'count': 1})
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 154, in get_or_create
+    return self.get_queryset().get_or_create(**kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 388, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 380, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 1511, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 898, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 178, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 104, in _record
+    return method(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1062, "Duplicate entry '708-263-5932' for key 'number'")
+Internal Server Error: /SMSApp/submitsms/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 152, in smsconfirm
+    phone = PhoneNumber.objects.get(number=phone_number)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 307, in get
+    self.model._meta.object_name)
+DoesNotExist: PhoneNumber matching query does not exist.
+Internal Server Error: /SMSApp/submitsms/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 157, in smsconfirm
+    PhoneNumber.objects.create(number=phone_number, networt=network, count=1)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 157, in create
+    return self.get_queryset().create(**kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 317, in create
+    obj = self.model(**kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/base.py", line 417, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'networt' is an invalid keyword argument for this function
+Internal Server Error: /SMSApp/update_password/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 355, in update_password
+    return redirect('user_password', user)
+UnboundLocalError: local variable 'user' referenced before assignment
+Internal Server Error: /SMSApp/update_profile/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 386, in update_profile
+    return redirect('user_profile', user)
+UnboundLocalError: local variable 'user' referenced before assignment

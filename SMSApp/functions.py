@@ -14,7 +14,10 @@ def queueMessage(user, number, msg, time, network):
     
     #Get a datetime that is 30 minutes from now, Check if message time is within 30 minutes and if so queue it to tasks otherwise queue it to table
     future= datetime.datetime.now() + datetime.timedelta(minutes=30)
-
+    print "--QUEUEMESSAGE---"
+    print "now" + str(datetime.datetime.utcnow().replace(tzinfo=utc))
+    print "future" + str(future)
+    print "time" + str(time)
     msgQueue = MessageQueue.objects.create(number=number, network=network, text=msg, time=time)
     if time < future:
       #Send message to task queue now.

@@ -2,13 +2,15 @@
 
 <div id='home' >
    <div class="row reminder-form">
-     <div class="col-md-4">
-       <p class="speech">This is how we are able to remind you!</p>
-       <p class="speech3">This is your custom reminder!</p>
+     <div class="col-md-3">
+       <p class="speech hidden-sm hidden-xs">This is how we are able to remind you!</p>
+       <p class="speech3 hidden-sm hidden-xs">This is your custom reminder!</p>
      </div>
+       <div class="col-md-6">
      {% include "SMSApp/forms/reminder_form.html" %}
-      <div class="col-md-4">
-         <p class="speech2">Enter a date and or time here. It could be anything from "now", "3pm", "noon today" and more!</p>
+           </div>
+      <div class="col-md-3">
+         <p class="speech2 hidden-sm hidden-xs">Enter a date and or time here. It could be anything from "now", "3pm", "noon today" and more!</p>
       </div>
    </div>
 </div>

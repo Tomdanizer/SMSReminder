@@ -1,3 +1,46 @@
+#user_menu > li.active>a{
+    background-color: #146D77;
+}
+#user_menu{
+    border: 1px solid #12474D;
+padding: 5px;
+border-radius: 4px;
+background-color: #105B63;
+
+}
+#user_menu > li > a{
+    color: #999;
+}
+#user_menu > li > a:hover{
+    color: #fff;
+    background-color: #1B828D;
+}
+
+#confused_stick{
+    margin-bottom: -85px;
+    top: -85px;
+}
+#smsapp-menu{
+    background-color: #105B63;
+}
+.spacer{
+    margin: 0 1em 0 1em;
+}
+.green{
+    color: green;
+}
+.red {
+    color: red;
+}
+.price-table{
+    background-color: #EBEBEB;
+}
+.price-table .price-table-row-header .price-table-cell-header{
+    padding: 25px;
+}
+.price-table .price-table-row-header{
+    text-align: center;
+}
 #date-field-error{
     position: absolute;
     right: 45px;
@@ -34,6 +77,7 @@ float: left;
 body{
  background-color: #FFFAD5; 
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    color: #181818;
 }
 .fieldWrapper{
    margin-top: 1em; 
@@ -43,24 +87,38 @@ body{
 }
 
 .stickfigure{
- display: block;
-margin: 0 auto; 
+display: block;
+margin: 0 auto;
+max-width: 325px;
+width: 100%;
+height: auto;
 }
 .q1{
- left: 130px; 
+display: block;
+margin: 0 auto;
+max-width: 45px;
+width: 100%;
+height: auto;
+left: 50px;
+top: 105px;
 }
 .q2{
-left: 160px;
-top: -25px;
+display: block;
+margin: 0 auto;
+max-width: 45px;
+width: 100%;
+height: auto;
+left: -50px;
+top: 65px;
 }
 .q3{
-  left: 200px;
-  top: -5px;
+display: block;
+margin: 0 auto;
+max-width: 45px;
+width: 100%;
+height: auto;
 }
-.q4{
-left: 240px;
-top: 40px;
-}
+
 
 .info-content{
       padding: 2em 5em 2em 5em;
@@ -90,17 +148,26 @@ top: 40px;
    padding-top: 3em;
    padding-bottom: 3em;
 }
+.pricing-section{
+    background-color: #EEEEEE;
+}
 .about-section{
      background-color: #BD4932;
 }
 .blacklist-section{
-     background-color: #EEEEEE;
+
+    background-color: #BD4932;
 }
 .faq-section{
-     background-color: #BD4932;
+     background-color: #EEEEEE;
 }
 .footer-section{
   background-color: #EEEEEE;
+position: fixed;
+bottom: 0;
+width: 100%;
+height: 60px;
+
 }
 .section{
 padding: 3em 0 3em 0;
@@ -301,7 +368,7 @@ display: none;
   }
     
   100% {
-    -webkit-transform: translate(0,0) ) scale(1) rotate(0);
+    -webkit-transform: translate(0,0)  scale(1) rotate(0);
   }
 
 }

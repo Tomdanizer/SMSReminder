@@ -1,6 +1,7 @@
 //Main SMS functions
 var sms = (function(){
   var selectedCarrier = null;
+  var datepicker = $('#datetimepicker');
   var init = function(){
       setupStepTransitionListeners();
       setupControls();
@@ -39,16 +40,48 @@ var sms = (function(){
          selectedCarrier.addClass('carrier-selected');
          //$('#carrier_selected').text(this.getAttribute("data-carriername") + " selected");
       });
-    
+
+      $("#remind_me_submit").click(function(e){
+          var date = datepicker.data("DateTimePicker");
+
+          if(date !== null){
+            e.preventDefault();
+            date = moment(date).zone('-0500').format('YYYY-MM-DD HH:mm');
+            $("#id_date").val(date);
+            $("#reminder_form").submit();
+          }else{
+
+          }
+
+      })
+
+      $("#id_date2").on("input", function(e){
+          datepicker.data("DateTimePicker", null);
+          console.log(e);
+          $("#id_date").val(this.value)
+      });
+
+      datepicker.on("dp.show", function(e){
+          console.log(e);
+          // $("#id_date2").val("")
+          // $("#id_date").val(this.value)
+      });
+      datepicker.on("dp.change", function(e){
+          datepicker.data("DateTimePicker", e.date);
+          console.log(e);
+          // $("#id_date2").val("")
+          // $("#id_date").val(this.value)
+      });
 
   },
   setupControls = function(){
       //Attaches datetime picker to date field
-      $('#datetimepicker').datetimepicker();
+      datepicker.datetimepicker();
+
   },
   setupStepTransitionListeners = function(){
          var $phoneNumberField = $("#id_phone_number");
-         var $dateField = $("#id_date");
+         var $dateField = $("#id_date2");
          var $messageField = $("#id_message");
          var $speech1 = $(".speech").hide();
          var $speech2 = $(".speech2").hide();;

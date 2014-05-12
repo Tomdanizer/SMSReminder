@@ -132,6 +132,7 @@ def smsconfirm(request):
 
             phone_number = form.cleaned_data['phone_number']
             time = form.cleaned_data['date']
+            usertime = form.cleaned_data['date2']
             message = form.cleaned_data['message']
             network = form.cleaned_data['network']
             
@@ -148,11 +149,12 @@ def smsconfirm(request):
                 
             #Check if number is blacklisted
             if not BlackList.objects.filter(number=phone_number):
-              obj, phoneCreated = PhoneNumber.objects.get_or_create(
-              number=phone_number, network=network, defaults={'count': 1})
-              if not phoneCreated:
-                currentCount =  PhoneNumber.objects.get(number=phone_number)
-                PhoneNumber.objects.filter(number=phone_number).update(count=F("count") + 1)
+              phone = PhoneNumber.objects.filter(number=phone_number)
+
+              if phone:
+                  PhoneNumber.objects.filter(number=phone_number).update(network=network,count=F("count") + 1)
+              else:
+                  PhoneNumber.objects.create(number=phone_number, network=network, count=1)
                                                      
               obj, messageCreated = Message.objects.get_or_create(
               text=message, defaults={'count': 1})
@@ -254,31 +256,24 @@ def register_confirm(request):
             phone_number = form.cleaned_data['phone_number']
             logger.debug(phone_number)
             network = form.cleaned_data['network']
-            
-          
-            #Check if number, username, email is already created
-            if User.objects.filter(email=email):
-                #email already used
-                context = {'alert': {'type':'danger', 'message':'That email is already in use.'}}
-                return render(request, 'SMSApp/sections/register.html', context)
-            else :
-                user = User.objects.create(email=email, username=username, first_name=first_name, last_name=last_name, number=phone_number, network=network, messageCount=0)
-                user.set_password(password)
-                user.save()
-                user = authenticate(username=username, password=password)
-                
-                if user is not None:
-                  # the password verified for the user
-                  if user.is_active:
-                    login(request, user)
-                    messages.add_message(request, messages.INFO, 'You have been successfully registered.')
-                    return redirect('index')
-                  else:
-                    messages.add_message(request, messages.ERROR, 'We were unable to signin your account.')
-                    return redirect('index')
-                else:
-                    messages.add_message(request, messages.ERROR, 'We were unable to signin your account. Please check your username or password.')
-                    return redirect('index')
+
+            user = User.objects.create(email=email, username=username, first_name=first_name, last_name=last_name, number=phone_number, network=network, messageCount=0)
+            user.set_password(password)
+            user.save()
+            user = authenticate(username=username, password=password)
+
+            if user is not None:
+              # the password verified for the user
+              if user.is_active:
+                login(request, user)
+                messages.add_message(request, messages.INFO, 'You have been successfully registered.')
+                return redirect('index')
+              else:
+                messages.add_message(request, messages.ERROR, 'We were unable to signin your account.')
+                return redirect('index')
+            else:
+                messages.add_message(request, messages.ERROR, 'We were unable to signin your account. Please check your username or password.')
+                return redirect('index')
         else:
             registerform = RegisterForm(request.POST) # An unbound form
             context =  {'form': registerform}
@@ -331,10 +326,12 @@ def user_billing(request, username):
     return render(request, 'SMSApp/user/user.html', context)
 
 def update_password(request):
+
   if request.method == 'POST': # If the form has been submitted...
           # ContactForm was defined in the the previous section
           form = ChangePasswordForm(request.POST) # A form bound to the POST data
           passwordForm = ChangePasswordForm()
+          user = request.user
           if form.is_valid(): # All validation rules pass
               password = form.cleaned_data['password']
               new_password = form.cleaned_data['new_password']
@@ -352,18 +349,22 @@ def update_password(request):
                   else:
                       messages.add_message(request, messages.ERROR, 'There has been an error changing your password. Your account is currently disabled.')
                       return redirect('user_password', user)
+              elif new_password != confirm_password:
+                  messages.add_message(request, messages.ERROR, 'Your new and confirm passwords do not match.')
+                  return redirect('user_password', user)
               else:
-                  messages.add_message(request, messages.ERROR, 'Your new password does not match.')
+                  messages.add_message(request, messages.ERROR, 'Incorrect password. No changes have been made.')
                   return redirect('user_password', user)
           else:
               messages.add_message(request, messages.ERROR, 'Please verify that the information in the form is correctly entered.')
               return redirect('user_password', user)
   else:
       messages.add_message(request, messages.ERROR, 'There was an error with the request. Please try again.')
-      return redirect('user_password', user)
+      return redirect('signin')
 
 def update_profile(request):
   if request.method == 'POST': # If the form has been submitted...
+    user = request.user
     form = ProfileForm(request.POST) # A form bound to the POST data
     if form.is_valid(): # All validation rules pass
       email = form.cleaned_data['email']
@@ -386,4 +387,4 @@ def update_profile(request):
       return redirect('user_profile', user)
   else:
       messages.add_message(request, messages.ERROR, 'There was an error with the request. Please try again.')
-      return redirect('user_profile', user)
+      return redirect('signin')

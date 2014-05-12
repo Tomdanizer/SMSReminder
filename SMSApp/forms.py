@@ -1,5 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
+from django.contrib.auth import get_user_model
 from localflavor.us.forms import USPhoneNumberField
 from dateutil.parser import *
 from dateutil.tz import *
@@ -11,12 +12,13 @@ from pytz import timezone
 import pytz
 from django.utils.timezone import utc
 import parsedatetime.parsedatetime as pdt
-
+User = get_user_model()
 
 
 class ReminderForm(forms.Form):
     phone_number = USPhoneNumberField(required = True)
     date = forms.CharField(max_length=50, required = True)
+    date2 = forms.CharField(max_length=50, required = True)
     message = forms.CharField(max_length=80, required = True)
     network = forms.CharField(max_length=80, required = True)
 
@@ -32,12 +34,14 @@ class ReminderForm(forms.Form):
             print "type error"
             typeError = True
             cal = pdt.Calendar()
+            print cal.parse(time)
             time = datetime.fromtimestamp(mktime(cal.parse(time)[0]))
 
         except ValueError, exVal:
             print "value error"
             valueError = True
             cal = pdt.Calendar()
+            print cal.parse(time)
             time = datetime.fromtimestamp(mktime(cal.parse(time)[0]))
         except AttributeError:
             raise ValidationError("Please enter a valid time format.")
@@ -45,7 +49,7 @@ class ReminderForm(forms.Form):
         now = datetime.now()
         seconds = timestamp(time) - timestamp(now)
         print seconds
-        if typeError or valueError or seconds < -60:
+        if (typeError or valueError) and seconds < 0 :
             raise ValidationError("Please enter a valid time format.")
 
         return self.cleaned_data
@@ -78,7 +82,17 @@ class RegisterForm(forms.Form):
     def clean(self):
         password1 = self.cleaned_data.get('password1')
         password2 = self.cleaned_data.get('password2')
+        email = self.cleaned_data.get('email')
+        username = self.cleaned_data.get('username')
         error_messages = []
+
+        if User.objects.filter(email=email):
+            #email already used
+            error_messages.append("That email is already in use.")
+
+        if User.objects.filter(username=username):
+            error_messages.append("That username is already in use.")
+
         if (self.cleaned_data.get('email') != self.cleaned_data.get('confirmemail')):
             error_messages.append("Email addresses must match.")
             #raise ValidationError(
