@@ -37,4 +37,4 @@ urlpatterns = patterns('',
 
     # ex: /SMSApp/register
 
-)+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+)
