@@ -185,36 +185,18 @@ padding: 3em 0 3em 0;
 .menu-row {
   background-color: #105B63; 
 border-color: #000000;
-height: 79px;
+padding-top: 1em;
+padding-bottom: 1em;
 
 }
-.menu-row > div > div > ul > li.sign-in > a{
-  padding-left: 3em;
-}
-.menu-row-small > div > div > ul > li{
-  padding-top: 1em;
-  padding-bottom: 1em;
-  
-}
-.menu-row > div > div > ul > li{
-  padding-top: 1em;
-  padding-bottom: 1em;
 
-}
 .menu-row-small {
   background-color: #105B63; 
 border-color: #000000;
-height: 40px;
+
 
 }
-.menu-row-small > div > div > ul > li.sign-in > a{
-  padding-left: 3em;
-}
-.menu-row-small > div > div > ul > li{
-  padding-top: 0;
-  padding-bottom: 0;
-  
-}
+
 
 /* Arrow guide boxes */
 .speech
@@ -397,7 +379,7 @@ display: none;
   animation-name: questionfloat;
 }
 
-a, img{
+a:hover, img{
   transition: all .5s;
   -moz-transition: all .5s; /* Firefox 4 */
   -webkit-transition: all .5s; /* Safari and Chrome */
