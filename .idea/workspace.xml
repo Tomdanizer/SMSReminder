@@ -44,7 +44,7 @@
       <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SMSReminder/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="20" selection-start="3800" selection-end="3800" vertical-scroll-proportion="0.815534" vertical-offset="2121" max-vertical-offset="2945">
+            <state line="21" column="6" selection-start="607" selection-end="672" vertical-scroll-proportion="0.23058252" vertical-offset="171" max-vertical-offset="2945">
               <folding />
             </state>
           </provider>
@@ -853,6 +853,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/sections/faq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="12" selection-start="525" selection-end="525" vertical-scroll-proportion="-13.37037" vertical-offset="0" max-vertical-offset="551">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="90" selection-start="1086" selection-end="1086" vertical-scroll-proportion="-14.44" vertical-offset="0" max-vertical-offset="836">
@@ -871,23 +885,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/sections/faq.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="12" selection-start="525" selection-end="525" vertical-scroll-proportion="-13.37037" vertical-offset="0" max-vertical-offset="551">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SMSReminder/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="20" selection-start="3800" selection-end="3800" vertical-scroll-proportion="0.815534" vertical-offset="2121" max-vertical-offset="2945">
+        <state line="21" column="6" selection-start="607" selection-end="672" vertical-scroll-proportion="0.23058252" vertical-offset="171" max-vertical-offset="2945">
           <folding />
         </state>
       </provider>

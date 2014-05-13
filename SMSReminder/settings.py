@@ -31,7 +31,7 @@ MESSAGE_TAGS = {message_constants.DEBUG: 'debug',
 DEBUG = False
 INTERNAL_IPS = ('108.203.64.165','127.0.0.1','0.0.0.0','192.168.196.1')
 DEBUG_TOOLBAR_CONFIG = {'INTERCEPT_REDIRECTS': False,}
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = [".nitrousbox.com"]
 
