@@ -13,4 +13,4 @@ urlpatterns = patterns('',
     url(r'^SMSApp/', include('SMSApp.urls')),
     url(r'^admin/', include(admin.site.urls)),
    # url(r'^__debug__/', include(debug_toolbar.urls)),
-) #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
