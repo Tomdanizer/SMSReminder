@@ -24,7 +24,8 @@ background-color: #105B63;
     background-color: #105B63;
 }
 .spacer{
-    margin: 0 1em 0 1em;
+width: 2em;
+height: 2em;
 }
 .green{
     color: green;
@@ -190,10 +191,15 @@ height: 79px;
 .menu-row > div > div > ul > li.sign-in > a{
   padding-left: 3em;
 }
-.menu-row > div > div > ul > li{
+.menu-row-small > div > div > ul > li{
   padding-top: 1em;
   padding-bottom: 1em;
   
+}
+.menu-row > div > div > ul > li{
+  padding-top: 1em;
+  padding-bottom: 1em;
+
 }
 .menu-row-small {
   background-color: #105B63; 
