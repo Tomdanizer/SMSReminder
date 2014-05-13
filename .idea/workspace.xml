@@ -44,7 +44,7 @@
       <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SMSReminder/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="-3.8" vertical-offset="171" max-vertical-offset="2945">
+            <state line="16" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="74.2" vertical-offset="2121" max-vertical-offset="2945">
               <folding />
             </state>
           </provider>
@@ -77,10 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SMSReminder/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="2" selection-start="521" selection-end="521" vertical-scroll-proportion="0.34587377" vertical-offset="0" max-vertical-offset="824">
+            <state line="15" column="1" selection-start="478" selection-end="478" vertical-scroll-proportion="-11.4" vertical-offset="0" max-vertical-offset="418">
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -97,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SMSApp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="90" selection-start="1086" selection-end="1086" vertical-scroll-proportion="-14.44" vertical-offset="0" max-vertical-offset="836">
+            <state line="38" column="66" selection-start="1961" selection-end="1961" vertical-scroll-proportion="0.8762136" vertical-offset="0" max-vertical-offset="836">
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -160,11 +160,11 @@
         <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/sections/pricing.html" />
         <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user_menu.html" />
         <option value="$PROJECT_DIR$/SMSApp/views.py" />
-        <option value="$PROJECT_DIR$/SMSApp/urls.py" />
         <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/sections/faq.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/SMSReminder/settings.py" />
         <option value="$PROJECT_DIR$/SMSReminder/urls.py" />
+        <option value="$PROJECT_DIR$/SMSApp/urls.py" />
       </list>
     </option>
   </component>
@@ -869,25 +869,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSReminder/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="-3.8" vertical-offset="171" max-vertical-offset="2945">
+        <state line="16" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="74.2" vertical-offset="2121" max-vertical-offset="2945">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SMSApp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="90" selection-start="1086" selection-end="1086" vertical-scroll-proportion="-14.44" vertical-offset="0" max-vertical-offset="836">
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSReminder/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="2" selection-start="521" selection-end="521" vertical-scroll-proportion="0.34587377" vertical-offset="0" max-vertical-offset="824">
+        <state line="15" column="1" selection-start="478" selection-end="478" vertical-scroll-proportion="-11.4" vertical-offset="0" max-vertical-offset="418">
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMSApp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="66" selection-start="1961" selection-end="1961" vertical-scroll-proportion="0.8762136" vertical-offset="0" max-vertical-offset="836">
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
