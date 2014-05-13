@@ -21,6 +21,8 @@ from django.contrib.auth import logout
 from django.contrib import messages
 from django.shortcuts import redirect
 
+from django.shortcuts import get_object_or_404
+from django.http import Http404
 #Reset PW
 from django.core.urlresolvers import reverse
 from django.contrib.auth.views import password_reset, password_reset_confirm
@@ -306,9 +308,13 @@ def reset(request):
 
 def user_profile(request, username):
     user = request.user
-    profileForm = ProfileForm(initial={'email':user.email, 'first_name':user.first_name, 'last_name':user.last_name, 'phone_number':user.number, 'network':user.network}) # An unbound form
-    context = {'pagetype': 'profile', 'form': profileForm}
-    return render(request, 'SMSApp/user/user.html', context)
+    if user.username == username:
+        profileForm = ProfileForm(initial={'email':user.email, 'first_name':user.first_name, 'last_name':user.last_name, 'phone_number':user.number, 'network':user.network}) # An unbound form
+        profile = get_object_or_404(SMSUser, username=username)
+        context = {'pagetype': 'profile', 'form': profileForm, 'profile':profile}
+        return render(request, 'SMSApp/user/user.html', context)
+    else:
+        raise Http404
 
 def user_messages(request, username):
     messages = UserMessageQueue.objects.all().filter(user=request.user)

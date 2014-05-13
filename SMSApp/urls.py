@@ -25,10 +25,10 @@ urlpatterns = patterns('',
     # ex: /SMSApp/blocknumber
     url(r'^blocknumber/$', views.blocknumber, name='blocknumber'),
     # ex: /SMSApp/username/
-    url(r'^(?P<username>\w+)/profile$', views.user_profile, name='user_profile'),
-    url(r'^(?P<username>\w+)/messages$', views.user_messages, name='user_messages'),
-    url(r'^(?P<username>\w+)/password$', views.user_password, name='user_password'),
-    url(r'^(?P<username>\w+)/billing$', views.user_billing, name='user_billing'),
+    url(r'^profile/(?P<username>\w+)/$', views.user_profile, name='user_profile'),
+    url(r'^messages/(?P<username>\w+)/$', views.user_messages, name='user_messages'),
+    url(r'^password/(?P<username>\w+)/$', views.user_password, name='user_password'),
+    url(r'^billing/(?P<username>\w+)/$', views.user_billing, name='user_billing'),
 
     
     # ex: /SMSApp/faq/

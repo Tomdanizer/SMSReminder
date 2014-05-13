@@ -9416,3 +9416,178 @@ Traceback (most recent call last):
   File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 386, in update_profile
     return redirect('user_profile', user)
 UnboundLocalError: local variable 'user' referenced before assignment
+Not Found: /favicon.ico
+Not Found: /SMSApp/Tomdanizer/profile
+Internal Server Error: /SMSApp/profile/Tomdanizer/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 310, in user_profile
+    profile = get_object_or_404(UserProfile, user=request.user)
+NameError: global name 'get_object_or_404' is not defined
+Internal Server Error: /SMSApp/profile/Tomdanizer/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 310, in user_profile
+    url = reverse('user_profile', kwargs = {'pagetype': 'profile', 'form': profileForm, 'username': username.username})
+AttributeError: 'unicode' object has no attribute 'username'
+Internal Server Error: /SMSApp/profile/Tomdanizer/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 310, in user_profile
+    url = reverse('user_profile', kwargs = {'pagetype': 'profile', 'form': profileForm, 'username': request.user.username})
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 509, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 429, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'user_profile' with arguments '()' and keyword arguments '{'username': u'Tomdanizer', 'pagetype': 'profile', 'form': <SMSApp.forms.ProfileForm object at 0x7fcc6c02ffd0>}' not found. 1 pattern(s) tried: ['SMSApp/profile/(?P<username>\\w+)/$']
+Not Found: /SMSApp/profile/
+Internal Server Error: /SMSApp/profile/Tomdanizer/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 310, in user_profile
+    profile = get_object_or_404(SMSUser, user=request.user)
+NameError: global name 'get_object_or_404' is not defined
+Internal Server Error: /SMSApp/profile/Tomdanizer/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 312, in user_profile
+    profile = get_object_or_404(SMSUser, user=request.user)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 113, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 298, in get
+    clone = self.filter(*args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 590, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/query.py", line 608, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1198, in add_q
+    clause = self._add_q(where_part, used_aliases)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1232, in _add_q
+    current_negated=current_negated)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1100, in build_filter
+    allow_explicit_fk=True)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1351, in setup_joins
+    names, opts, allow_many, allow_explicit_fk)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1274, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+FieldError: Cannot resolve keyword 'user' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, messageCount, network, number, password, user_permissions, usermessagequeue, username
+Not Found: /SMSApp/profile/fff/
+Internal Server Error: /SMSApp/profile/Tomdancizer/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 317, in user_profile
+    raise Http404
+NameError: global name 'Http404' is not defined
+Not Found: /SMSApp/profile/Tomdancizer/
+Not Found: /SMSApp/profile/
+Internal Server Error: /SMSApp
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 90, in get_response
+    response = middleware_method(request)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/middleware/common.py", line 71, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 573, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 453, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 318, in resolve
+    for pattern in self.url_patterns:
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 346, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/action/workspace/SMSReminder/SMSReminder/urls.py", line 15, in <module>
+    url(r'^__debug__/', include(debug_toolbar.urls)),
+NameError: name 'debug_toolbar' is not defined
+Internal Server Error: /SMSApp
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 90, in get_response
+    response = middleware_method(request)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/middleware/common.py", line 71, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 573, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 453, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 318, in resolve
+    for pattern in self.url_patterns:
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 346, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/action/workspace/SMSReminder/SMSReminder/urls.py", line 15, in <module>
+    url(r'^__debug__/', include(debug_toolbar.urls)),
+NameError: name 'debug_toolbar' is not defined
+Not Found: /SMSApp/profile/Tomdfanizer/
+Not Found: /SMSApp/profile
+Not Found: /
+Not Found: /SMSApp/static
+Not Found: /SMSApp/static/
+Internal Server Error: /SMSApp/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 318, in resolve
+    for pattern in self.url_patterns:
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 346, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/action/workspace/SMSReminder/SMSReminder/urls.py", line 13, in <module>
+    url(r'^SMSApp/', include('SMSApp.urls')),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/action/workspace/SMSReminder/SMSApp/urls.py", line 39, in <module>
+    )+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+NameError: name 'static' is not defined
+Not Found: /SMSApp/static
+Not Found: /static
+Internal Server Error: /SMSApp/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/staticfiles.py", line 137, in process_response
+    'staticfiles_finders': self.get_staticfiles_finders(),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/staticfiles.py", line 148, in get_staticfiles_finders
+    for path, finder_storage in finder.list([]):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/staticfiles/finders.py", line 106, in list
+    for path in utils.get_files(storage, ignore_patterns):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/staticfiles/utils.py", line 25, in get_files
+    directories, files = storage.listdir(location)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/files/storage.py", line 250, in listdir
+    for entry in os.listdir(path):
+OSError: [Errno 2] No such file or directory: '/home/action/workspace/SMSReminder/static'
+Internal Server Error: /SMSApp/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 201, in get_response
+    response = middleware_method(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 85, in process_response
+    new_response = panel.process_response(request, response)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/staticfiles.py", line 137, in process_response
+    'staticfiles_finders': self.get_staticfiles_finders(),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/debug_toolbar/panels/staticfiles.py", line 148, in get_staticfiles_finders
+    for path, finder_storage in finder.list([]):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/staticfiles/finders.py", line 106, in list
+    for path in utils.get_files(storage, ignore_patterns):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/contrib/staticfiles/utils.py", line 25, in get_files
+    directories, files = storage.listdir(location)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/files/storage.py", line 250, in listdir
+    for entry in os.listdir(path):
+OSError: [Errno 2] No such file or directory: '/home/action/workspace/SMSReminder/static'
+Not Found: /SMSApp/profile/Tomdanizer/

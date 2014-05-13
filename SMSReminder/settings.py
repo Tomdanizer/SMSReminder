@@ -33,7 +33,7 @@ INTERNAL_IPS = ('108.203.64.165','127.0.0.1','0.0.0.0','192.168.196.1')
 DEBUG_TOOLBAR_CONFIG = {'INTERCEPT_REDIRECTS': False,}
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".nitrousbox.com"]
 
 # Application definition
 

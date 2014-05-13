@@ -1,10 +1,10 @@
 {% block user_menu %}
   {% if user.id %}
     <li>
-      <a href="/SMSApp/{{ user }}/profile">{{ user }}</a>
+      <a href="{% url 'user_profile' user%}">{{ user }}</a>
     </li> 
     <li>
-      <a href="/SMSApp/signout">Logout</a>
+      <a href="{% url 'signout'%}">Logout</a>
     </li> 
   {% else %}
     <li>
