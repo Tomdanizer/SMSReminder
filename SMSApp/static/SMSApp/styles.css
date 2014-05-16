@@ -1,5 +1,55 @@
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
+    background-color: #146D77;
+    color: #ffffff;
+    border-radius: 4px;
+}
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+color: #fff;
+background-color: #1B828D;
+border-radius: 4px;
+}
+
+.contact-icon{
+    float:right;
+    padding-left: 15px;
+}
+.panel-controls{
+    border-bottom: 1px solid #D5D5D5;
+}
+#contacts > .panel, .dashboard > .panel{
+    background-color: #EEEEEE;
+}
+#contacts > .panel.panel-primary, .dashboard > .panel.panel-primary{
+    border-color: #12474D;
+}
+#contacts > .panel.panel-primary > .panel-heading, .dashboard > .panel.panel-primary  > .panel-heading {
+ color: #999;
+background-color: #105B63;
+border-color: #12474D;
+}
+.contact-item{
+   list-style: none;
+}
+
+.contact-item > div >.panel.panel-info.favorite{
+border-color: #3AD6AA;
+}
+.panel.panel-info.favorite > .panel-heading{
+    color: #000000;
+background-color: #32BD96;
+border-color: #3AD6AA;
+}
+.contact-item > div >.panel.panel-info{
+    border-color: #E04F32;
+}
+.contact-item .panel-info > .panel-heading{
+color: #000000;
+background-color: #BD4932;
+border-color: #E04F32;
+}
 #user_menu > li.active>a{
     background-color: #146D77;
+    color: #ffffff;
 }
 #user_menu{
     border: 1px solid #12474D;

@@ -18,7 +18,7 @@ def getQueueMessage():
     print 'getting queue messages'
     now=datetime.datetime.now()
     #Get all messages within the next 30minutes
-    messages = MessageQueue.objects.all().filter(time__range=(datetime.datetime.now(),datetime.datetime.now() + datetime.timedelta(minutes=30)))
+    messages = Message.objects.all().filter(time__range=(datetime.datetime.now(),datetime.datetime.now() + datetime.timedelta(minutes=30)))
     for message in messages:
       print(timestamp(now) - timestamp(message.time))
       print message.text
@@ -43,11 +43,24 @@ def revoke_message(id):
 
 @shared_task
 def email_Reminder(id, msg, phone, network):
-    phone = phone.replace('-', '').replace(' ', '').replace('(', '').replace(')', '') 
+    print '---------EMAIL REMINDER DEBUG---------------'
+    phone = phone.replace('-', '').replace(' ', '').replace('(', '').replace(')', '')
     if not network:
         email = EmailMessage('SMSReminder', msg, to=[phone+'@txt.att.net'])
     else:
         email = EmailMessage('SMSReminder', msg, to=[phone + '@' + network])
-    email.send()
-    MessageQueue.objects.filter(id = id).delete()
+    #email.send()
+    print id
+
+    print Message.objects.filter(id = id).update(sent=True)
+    # message2 = Message.objects.filter(id = message)
+    # #usermsg = Message.objects.filter(id = message.message.id).update(sent=True)
+    #
+    # print message
+    # print message.values()
+    # print '---mesage2---'
+    # print message2.values()
+    # message2.update(sent=True)
+    # message2.save()
+    #message.delete()
     

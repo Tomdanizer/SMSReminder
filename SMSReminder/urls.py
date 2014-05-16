@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
     url(r'^SMSApp/', include('SMSApp.urls')),
     url(r'^admin/', include(admin.site.urls)),
-   # url(r'^__debug__/', include(debug_toolbar.urls)),
+    url(r'^__debug__/', include(debug_toolbar.urls)),
 )
 if not settings.DEBUG:
     urlpatterns += patterns('',

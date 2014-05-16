@@ -80,9 +80,13 @@ def delete_messages(request):
   if request.method == 'POST': # If the form has been submitted...
     for key, value in request.POST.iteritems():
       if value == "on":
-        MessageQueue.objects.filter(uuid = key).delete()
+        print '--------------DELETE MESSAGE------------'
+        print key
+        message = Message.objects.filter(uuid = key).update(cancelled=True)
+        logger.info(message)
         revoke(str(key))
         #This doesnt seem to get called. TODO FIX
+
         #revoke_message(key)
 
     messages.add_message(request, messages.ERROR, 'The selected messages have been successfully cancelled!')
@@ -151,37 +155,10 @@ def smsconfirm(request):
                 
             #Check if number is blacklisted
             if not BlackList.objects.filter(number=phone_number):
-              phone = PhoneNumber.objects.filter(number=phone_number)
-
-              if phone:
-                  PhoneNumber.objects.filter(number=phone_number).update(network=network,count=F("count") + 1)
-              else:
-                  PhoneNumber.objects.create(number=phone_number, network=network, count=1)
-                                                     
-              obj, messageCreated = Message.objects.get_or_create(
-              text=message, defaults={'count': 1})
-              if not messageCreated:
-                currentCount =  PhoneNumber.objects.get(number=phone_number)
-                Message.objects.filter(text=message).update(count=F("count") + 1)
-                
-              obj, timeCreated = Time.objects.get_or_create(
-              time=time, defaults={'count': 1})
-              if not timeCreated:
-                currentCount =  PhoneNumber.objects.get(number=phone_number)
-                Time.objects.filter(time=time).update(count=F("count") + 1)
-
-              #print 'made it'
-              #address = phone_number.replace('-', '').replace(' ', '') +'@txt.att.net'
-              #print address
-              #email = EmailMessage(time, message, to=[address])
-              #print email
-              #email.send()
-              
-              #email_Reminder.apply_async((time,message), queue='celery', countdown=int(time))
               queueMessage(request.user, phone_number, message, time, network)
-              
               messages.add_message(request, messages.INFO, 'Your message has been created!')
               return redirect('index')
+
             else:
                 messages.add_message(request, messages.ERROR, 'This number has been blacklisted.')
                 return redirect('index')
@@ -220,7 +197,7 @@ def signin_confirm(request):
                        else:
                           logger.debug('REMBER!')
                        messages.add_message(request, messages.INFO, 'You have been successfully signed in!')
-                       return redirect('index')
+                       return redirect('user_dashboard', request.user)
                        #return render(request, 'SMSApp/index.html', context)
                   else:
                     messages.add_message(request, messages.ERROR, 'We were unable to signin your account. It has been disabled.')
@@ -259,7 +236,7 @@ def register_confirm(request):
             logger.debug(phone_number)
             network = form.cleaned_data['network']
 
-            user = User.objects.create(email=email, username=username, first_name=first_name, last_name=last_name, number=phone_number, network=network, messageCount=0)
+            user = User.objects.create(email=email, username=username, first_name=first_name, last_name=last_name, number=phone_number, network=network)
             user.set_password(password)
             user.save()
             user = authenticate(username=username, password=password)
@@ -306,6 +283,27 @@ def reset(request):
         subject_template_name='SMSApp/sections/pwreset/password_reset_subject.txt',
         post_reset_redirect=reverse('reset_sent'), extra_context={'form':form})
 
+def user_contacts(request, username):
+    user = request.user
+    if user.username == username:
+        profile = get_object_or_404(SMSUser, username=username)
+        context = {'pagetype': 'contacts', 'profile':profile}
+        return render(request, 'SMSApp/user/user.html', context)
+    else:
+        raise Http404
+
+def user_dashboard(request, username):
+    user = request.user
+    if user.username == username:
+        profile = get_object_or_404(SMSUser, username=username)
+        form = ReminderForm()
+        messages = Message.objects.all().filter(user=request.user, sent=False, cancelled = False)[:5]
+        sentmessages = Message.objects.all().filter(user=request.user, sent=True, cancelled = False)[:5]
+        context = {'pagetype': 'dashboard','form':form, 'profile':profile, 'sentmessages':sentmessages, 'messagequeue':messages}
+        return render(request, 'SMSApp/user/user.html', context)
+    else:
+        raise Http404
+
 def user_profile(request, username):
     user = request.user
     if user.username == username:
@@ -317,20 +315,35 @@ def user_profile(request, username):
         raise Http404
 
 def user_messages(request, username):
-    messages = UserMessageQueue.objects.all().filter(user=request.user)
-    context = {'pagetype': 'messages', 'messagequeue':messages}
+  user = request.user
+  if user.username == username:
+    messages = Message.objects.all().filter(user=request.user, sent=False, cancelled = False)
+    logger.info(messages.values())
+    sentmessages = Message.objects.all().filter(user=request.user, sent=True, cancelled = False)
+    logger.info(sentmessages.values())
+    profile = get_object_or_404(SMSUser, username=username)
+    context = {'pagetype': 'messages', 'sentmessages':sentmessages, 'messagequeue':messages, 'profile':profile}
     
     return render(request, 'SMSApp/user/user.html', context)
-  
+  else:
+    raise Http404
 def user_password(request,username):
+  user = request.user
+  if user.username == username:
     passwordForm = ChangePasswordForm()
-    context = {'pagetype': 'password', 'form': passwordForm}
+    profile = get_object_or_404(SMSUser, username=username)
+    context = {'pagetype': 'password', 'form': passwordForm, 'profile':profile}
     return render(request, 'SMSApp/user/user.html', context)
-  
+  else:
+    raise Http404
 def user_billing(request, username):
-    context = {'pagetype': 'billing'}
+  user = request.user
+  if user.username == username:
+    profile = get_object_or_404(SMSUser, username=username)
+    context = {'pagetype': 'billing', 'profile':profile}
     return render(request, 'SMSApp/user/user.html', context)
-
+  else:
+    raise Http404
 def update_password(request):
 
   if request.method == 'POST': # If the form has been submitted...

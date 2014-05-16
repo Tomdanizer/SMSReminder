@@ -18,7 +18,17 @@ def queueMessage(user, number, msg, time, network):
     print "now" + str(datetime.datetime.utcnow().replace(tzinfo=utc))
     print "future" + str(future)
     print "time" + str(time)
-    msgQueue = MessageQueue.objects.create(number=number, network=network, text=msg, time=time)
+
+    if not user.is_authenticated():
+        user = None
+
+    msgQueue = Message.objects.create(
+        user=user,
+        number =number,
+        network = network,
+        text = msg,
+        time = time)
+
     if time < future:
       #Send message to task queue now.
       #now=datetime.datetime.now()
@@ -40,5 +50,3 @@ def queueMessage(user, number, msg, time, network):
 
 
 
-    if user.is_authenticated():
-        UserMessageQueue.objects.create(user=user, message = msgQueue)

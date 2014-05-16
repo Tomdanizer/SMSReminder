@@ -1,0 +1,81 @@
+{% load staticfiles %}
+{% load webdesign %}
+<div id="dashboard" class="dashboard">
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        <div class="row text-center">
+          <h4>Create Reminders</h4>
+        </div>
+      </div>
+      <div class="panel-body">
+          <div class="row">
+      <div class="col-md-12">
+          {% include "SMSApp/forms/user_reminder_form.html" %}
+      </div>
+  </div>
+      </div>
+  </div>
+
+  <div class="row ">
+      <div class="col-md-6 dashboard">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+              <h4 class="text-center">Sent Messages</h4>
+          </div>
+
+                  <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Number</th>
+                      <th>Message</th>
+                      <th>Time</th>
+                      <th>Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% if sentmessages %}
+                      {% for message in sentmessages %}
+                      <tr><td>{{forloop.counter0}} </td><td>{{message.number}} </td><td> {{ message.text }} </td><td> {{ message.time }}</td><td><input type="checkbox" name="{{message.uuid}}"/></td></tr>
+                      {% endfor %}
+                    {% else %}
+                       <tr><td>There are no messages to display</td><td></td><td></td><td></td><td></td></tr>
+                    {% endif %}
+                    </tbody>
+                  </table>
+        </div>
+
+      </div>
+
+        <div class="col-md-6 dashboard">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+              <h4 class="text-center">Upcoming Messages</h4>
+          </div>
+
+                  <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Number</th>
+                      <th>Message</th>
+                      <th>Time</th>
+                      <th>Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% if messagequeue %}
+                          {% for message in messagequeue %}
+                          <tr><td>{{forloop.counter0}} </td><td>{{message.number}} </td><td> {{ message.text }} </td><td> {{ message.time }}</td><td><input type="checkbox" name="{{message.uuid}}"/></td></tr>
+                          {% endfor %}
+                        {% else %}
+                           <tr><td>There are no messages to display</td><td></td><td></td><td></td><td></td></tr>
+                        {% endif %}
+                    </tbody>
+                  </table>
+        </div>
+
+      </div>
+
+  </div>
+</div>
