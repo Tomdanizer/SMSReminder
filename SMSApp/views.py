@@ -48,6 +48,23 @@ User = get_user_model()
 
 def about(request):
     return HttpResponse("You're looking at about page")
+def add_contact(request):
+    if request.method == 'POST': # If the form has been submitted...
+        # ContactForm was defined in the the previous section
+        form = BlockForm(request.POST) # A form bound to the POST data
+        user = request.user
+        if form.is_valid(): # All validation rules pass
+            phone_number = form.cleaned_data['blacklist_phone_number']
+            num = BlackList.objects.create(number=phone_number)
+            messages.add_message(request, messages.INFO, 'The number has been successfully added to the blacklist.')
+            return redirect('index')
+
+        else:
+            messages.add_message(request, messages.ERROR, 'Invalid phone number entered. Please try again.')
+            return redirect('index')
+    else:
+        messages.add_message(request, messages.INFO, 'There was an issue with your request. Please try again.')
+        return redirect('index')
 
 def blocknumber_confirm(request):
     if request.method == 'POST': # If the form has been submitted...
@@ -287,7 +304,8 @@ def user_contacts(request, username):
     user = request.user
     if user.username == username:
         profile = get_object_or_404(SMSUser, username=username)
-        context = {'pagetype': 'contacts', 'profile':profile}
+        form = AddContactForm()
+        context = {'pagetype': 'contacts', 'profile':profile, 'form':form}
         return render(request, 'SMSApp/user/user.html', context)
     else:
         raise Http404

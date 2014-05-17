@@ -1,15 +1,14 @@
 {% load staticfiles %}
 {% load webdesign %}
-<div id="profile">
-  <div class="col-md-6 col-md-offset-3">
-    <div class="row text-center">
-      <h1>Update profile information</h1>
-    </div>
-    
-
-
-    {% block profile_form %}
-      {% include "SMSApp/forms/profile_form.html" %}
-    {% endblock profile_form %}
-  </div>
+<div id="profile" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 dashboard">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4 class="text-center">Update profile information</h4>
+        </div>
+        <div class="panel-body">
+                {% block profile_form %}
+                  {% include "SMSApp/forms/profile_form.html" %}
+                {% endblock profile_form %}
+        </div>
+      </div>
 </div>

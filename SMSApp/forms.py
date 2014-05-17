@@ -128,3 +128,18 @@ class ResetPasswordForm(forms.Form):
 class ResetNewPasswordForm(forms.Form):
     new_password1 = forms.CharField(max_length=30, required = True)
     new_password2 = forms.CharField(max_length=30, required = True)
+
+NETWORK_CHOICES = (
+    ('txt.att.net', 'AT&T'),
+    ('messaging.sprintpcs.com', 'Sprint'),
+    ('tmomail.net', 'T-Mobile'),
+    ('vtext.com', 'Verizon'),
+
+)
+
+class AddContactForm(forms.Form):
+    first_name = forms.CharField(max_length=20)
+    last_name = forms.CharField(max_length=20)
+    phone_number = USPhoneNumberField()
+    network = forms.CharField(max_length=80, required = True, widget=forms.Select(choices=NETWORK_CHOICES))
+    favorite = forms.BooleanField()

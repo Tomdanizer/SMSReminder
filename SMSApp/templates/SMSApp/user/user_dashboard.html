@@ -1,42 +1,43 @@
 {% load staticfiles %}
 {% load webdesign %}
-<div id="dashboard" class="dashboard">
+<div id="dashboard" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dashboard">
   <div class="panel panel-primary">
-      <div class="panel-heading">
-        <div class="row text-center">
-          <h4>Create Reminders</h4>
-        </div>
-      </div>
+{#      <div class="panel-heading">#}
+{#        <div class="row text-center">#}
+{#          <h4>Create Reminders</h4>#}
+{#        </div>#}
+{#      </div>#}
       <div class="panel-body">
           <div class="row">
-      <div class="col-md-12">
-          {% include "SMSApp/forms/user_reminder_form.html" %}
-      </div>
-  </div>
+              <div class="col-md-12">
+                  {% include "SMSApp/forms/user_reminder_form.html" %}
+              </div>
+            </div>
       </div>
   </div>
 
   <div class="row ">
-      <div class="col-md-6 dashboard">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 dashboard">
         <div class="panel panel-primary">
           <div class="panel-heading">
               <h4 class="text-center">Sent Messages</h4>
           </div>
 
                   <table class="table table-striped">
+                  {% if not sentmessages %}
                     <thead>
                     <tr>
                       <th>#</th>
                       <th>Number</th>
                       <th>Message</th>
                       <th>Time</th>
-                      <th>Delete</th>
                     </tr>
                     </thead>
+                  {% endif %}
                     <tbody>
                     {% if sentmessages %}
                       {% for message in sentmessages %}
-                      <tr><td>{{forloop.counter0}} </td><td>{{message.number}} </td><td> {{ message.text }} </td><td> {{ message.time }}</td><td><input type="checkbox" name="{{message.uuid}}"/></td></tr>
+                      <tr><td>{{forloop.counter0}} </td><td>{{message.number}} </td><td> {{ message.text }} </td><td> {{ message.time }}</td></tr>
                       {% endfor %}
                     {% else %}
                        <tr><td>There are no messages to display</td><td></td><td></td><td></td><td></td></tr>
@@ -47,35 +48,102 @@
 
       </div>
 
-        <div class="col-md-6 dashboard">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 dashboard">
         <div class="panel panel-primary">
           <div class="panel-heading">
               <h4 class="text-center">Upcoming Messages</h4>
           </div>
 
                   <table class="table table-striped">
+                  {% if messagequeue %}
                     <thead>
                     <tr>
                       <th>#</th>
                       <th>Number</th>
                       <th>Message</th>
                       <th>Time</th>
-                      <th>Delete</th>
                     </tr>
                     </thead>
+                  {% endif %}
                     <tbody>
                         {% if messagequeue %}
                           {% for message in messagequeue %}
                           <tr><td>{{forloop.counter0}} </td><td>{{message.number}} </td><td> {{ message.text }} </td><td> {{ message.time }}</td><td><input type="checkbox" name="{{message.uuid}}"/></td></tr>
                           {% endfor %}
                         {% else %}
-                           <tr><td>There are no messages to display</td><td></td><td></td><td></td><td></td></tr>
+                           <tr><td>There are no messages to display</td></tr>
                         {% endif %}
                     </tbody>
                   </table>
         </div>
 
       </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 dashboard">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+              <h4 class="text-center">Contacts</h4>
+          </div>
+          <div class="panel-body">
+              <li class="contact-item">
+                  <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
+                      <div class="panel panel-info favorite">
+                          <div class="panel-heading ">
+                              <div class="panel-title">Daniel Thomiszer
+                              <span class="glyphicon glyphicon-remove contact-icon"></span>
+                              <span class="glyphicon glyphicon-edit contact-icon"></span>
+                              <span class="glyphicon glyphicon-star contact-icon"></span>
+                              </div>
+                          </div>
+                          <div class="panel-body">
+                              <div>
+                                  708-263-5932
+                              </div>
+                              <div>
+                                  Last messaged 3 days ago
+                                  <span class="glyphicon glyphicon-envelope contact-icon"></span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
 
+              </li>
+                            <li class="contact-item">
+                  <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
+                      <div class="panel panel-info favorite">
+                          <div class="panel-heading ">
+                              <div class="panel-title">Daniel Thomiszer - 3 days ago
+                                  <span class="glyphicon glyphicon-envelope contact-icon"></span>
+                              </div>
+                          </div>
+                          <div class="panel-body">
+                              <div>
+                                  708-263-5932
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </li>
+                            <li class="contact-item">
+                                <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
+                      <div class="panel panel-info favorite">
+                          <div class="panel-heading ">
+                              <div class="panel-title">Daniel Thomiszer - 3 days ago
+                                  <span class="glyphicon glyphicon-envelope contact-icon"></span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </li>
+
+
+
+
+
+          </div>
+        </div>
+
+      </div>
   </div>
 </div>

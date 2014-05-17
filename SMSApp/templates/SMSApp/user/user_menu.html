@@ -4,7 +4,14 @@
           class="active"
       {% endif %}>{% endcomment %}
     <li>
-      <a href="{% url 'user_dashboard' user%}">{{ user }}</a>
+      <a data-toggle="dropdown" role="button" href="{% url 'user_dashboard' user%}">{{ user }} <b class="caret"></b></a>
+        <ul id="user_menu" role="menu" class="dropdown-menu">
+            <li class="{% ifequal pagetype "dashboard" %}active{% endifequal %}"><a href="{% url 'user_dashboard' user %}">Dashboard</a></li>
+            <li class="{% ifequal pagetype "contacts" %}active{% endifequal %}"><a href="{% url 'user_contacts' user %}">Contacts</a></li>
+            <li class="{% ifequal pagetype "profile" %}active{% endifequal %}"><a href="{% url 'user_profile' user %}">Profile</a></li>
+            <li class="{% ifequal pagetype "messages" %}active{% endifequal %}"><a href="{% url 'user_messages' user %}">Messages</a></li>
+            <li class="{% ifequal pagetype "password" %}active{% endifequal %}"><a href="{% url 'user_password' user %}">Change Password</a></li>
+        </ul>
     </li> 
     <li>
       <a href="{% url 'signout'%}">Logout</a>

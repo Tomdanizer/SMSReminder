@@ -13,18 +13,19 @@
 {% block content %}
 <div class="row">
   <!-- User Control Menu -->
-  <div class="col-md-2">
-    <ul id="user_menu" class="nav nav-pills nav-stacked">
-    <li class="{% ifequal pagetype "dashboard" %}active{% endifequal %}"><a href="{% url 'user_dashboard' user %}">Dashboard</a></li>
-    <li class="{% ifequal pagetype "contacts" %}active{% endifequal %}"><a href="{% url 'user_contacts' user %}">Contacts</a></li>
-      <li class="{% ifequal pagetype "profile" %}active{% endifequal %}"><a href="{% url 'user_profile' user %}">Profile</a></li>
-      <li class="{% ifequal pagetype "messages" %}active{% endifequal %}"><a href="{% url 'user_messages' user %}">Messages</a></li>
-      <li class="{% ifequal pagetype "password" %}active{% endifequal %}"><a href="{% url 'user_password' user %}">Change Password</a></li>
-      <li class="{% ifequal pagetype "billing" %}active{% endifequal %}"><a href="{% url 'user_billing' user %}">Billing</a></li>
-    </ul>
+  <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+{#    <ul id="user_menu" class="nav nav-pills nav-stacked">#}
+{#    <li class="{% ifequal pagetype "dashboard" %}active{% endifequal %}"><a href="{% url 'user_dashboard' user %}">Dashboard</a></li>#}
+{#    <li class="{% ifequal pagetype "contacts" %}active{% endifequal %}"><a href="{% url 'user_contacts' user %}">Contacts</a></li>#}
+{#      <li class="{% ifequal pagetype "profile" %}active{% endifequal %}"><a href="{% url 'user_profile' user %}">Profile</a></li>#}
+{#      <li class="{% ifequal pagetype "messages" %}active{% endifequal %}"><a href="{% url 'user_messages' user %}">Messages</a></li>#}
+{#      <li class="{% ifequal pagetype "password" %}active{% endifequal %}"><a href="{% url 'user_password' user %}">Change Password</a></li>#}
+{#      <li class="{% ifequal pagetype "billing" %}active{% endifequal %}"><a href="{% url 'user_billing' user %}">Billing</a></li>#}
+{#    </ul>#}
   </div>
+</div>
+<div class="row">
   <!-- User Control Content -->
-  <div class="col-md-10">
   <!-- MESSAGES SECTION -->
   {% block message_section %}
     {% include "SMSApp/base/messages.html" %}
@@ -51,8 +52,6 @@
     {% if pagetype == "contacts" %}
       {% include "SMSApp/user/user_contacts.html" %}
     {% endif %}
-
-  </div>
 </div>
 
 {% endblock content %}

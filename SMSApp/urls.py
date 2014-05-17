@@ -18,6 +18,7 @@ urlpatterns = patterns('',
 
     ####### USER ########
     # USER MANAGEMENT URLS
+    url(r'^add_contact/$', views.add_contact, name='add_contact'),
     url(r'^delete_messages/$', views.delete_messages, name='delete_messages'),
     url(r'^update_password/$', views.update_password, name='update_password'),
     url(r'^update_profile/$', views.update_profile, name='update_profile'),

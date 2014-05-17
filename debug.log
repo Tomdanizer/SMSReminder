@@ -10098,3 +10098,561 @@ Not Found: /favicon.ico
 Not Found: /favicon.ico
 Not Found: /favicon.ico
 Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /SMSApp/contacts/Tomdanizer/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 309, in user_contacts
+    return render(request, 'SMSApp/user/user.html', context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader.py", line 169, in render_to_string
+    return t.render(context_instance)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 509, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 429, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'add_contact' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Internal Server Error: /SMSApp/contacts/Tomdanizer/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 309, in user_contacts
+    return render(request, 'SMSApp/user/user.html', context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader.py", line 169, in render_to_string
+    return t.render(context_instance)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 897, in render
+    return render_value_in_context(output, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 875, in render_value_in_context
+    value = force_text(value)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/encoding.py", line 100, in force_text
+    s = s.__unicode__()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/forms.py", line 425, in __str__
+    return self.as_widget()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 27, in as_widget
+    return old_as_widget(widget, attrs, only_initial)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 27, in as_widget
+    return old_as_widget(widget, attrs, only_initial)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/forms.py", line 475, in as_widget
+    return widget.render(name, self.value(), attrs=attrs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/widgets.py", line 504, in render
+    options = self.render_options(choices, [value])
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/widgets.py", line 528, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+ValueError: need more than 1 value to unpack
+Internal Server Error: /SMSApp/contacts/Tomdanizer/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 309, in user_contacts
+    return render(request, 'SMSApp/user/user.html', context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader.py", line 169, in render_to_string
+    return t.render(context_instance)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 897, in render
+    return render_value_in_context(output, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 875, in render_value_in_context
+    value = force_text(value)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/encoding.py", line 100, in force_text
+    s = s.__unicode__()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/forms.py", line 425, in __str__
+    return self.as_widget()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 27, in as_widget
+    return old_as_widget(widget, attrs, only_initial)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 27, in as_widget
+    return old_as_widget(widget, attrs, only_initial)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/forms.py", line 475, in as_widget
+    return widget.render(name, self.value(), attrs=attrs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/widgets.py", line 504, in render
+    options = self.render_options(choices, [value])
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/widgets.py", line 528, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+ValueError: too many values to unpack
+Internal Server Error: /SMSApp/contacts/Tomdanizer/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 309, in user_contacts
+    return render(request, 'SMSApp/user/user.html', context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader.py", line 169, in render_to_string
+    return t.render(context_instance)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 897, in render
+    return render_value_in_context(output, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 875, in render_value_in_context
+    value = force_text(value)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/encoding.py", line 100, in force_text
+    s = s.__unicode__()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/forms.py", line 425, in __str__
+    return self.as_widget()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 27, in as_widget
+    return old_as_widget(widget, attrs, only_initial)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 27, in as_widget
+    return old_as_widget(widget, attrs, only_initial)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/forms.py", line 475, in as_widget
+    return widget.render(name, self.value(), attrs=attrs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/widgets.py", line 504, in render
+    options = self.render_options(choices, [value])
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/widgets.py", line 528, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+ValueError: too many values to unpack
+Internal Server Error: /SMSApp/contacts/Tomdanizer/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 309, in user_contacts
+    return render(request, 'SMSApp/user/user.html', context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader.py", line 169, in render_to_string
+    return t.render(context_instance)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 897, in render
+    return render_value_in_context(output, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 875, in render_value_in_context
+    value = force_text(value)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/encoding.py", line 100, in force_text
+    s = s.__unicode__()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/forms.py", line 425, in __str__
+    return self.as_widget()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 27, in as_widget
+    return old_as_widget(widget, attrs, only_initial)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 27, in as_widget
+    return old_as_widget(widget, attrs, only_initial)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/forms.py", line 475, in as_widget
+    return widget.render(name, self.value(), attrs=attrs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/widgets.py", line 504, in render
+    options = self.render_options(choices, [value])
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/widgets.py", line 528, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+ValueError: too many values to unpack
+Internal Server Error: /SMSApp/contacts/Tomdanizer/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 309, in user_contacts
+    return render(request, 'SMSApp/user/user.html', context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader.py", line 169, in render_to_string
+    return t.render(context_instance)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 897, in render
+    return render_value_in_context(output, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 875, in render_value_in_context
+    value = force_text(value)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/encoding.py", line 100, in force_text
+    s = s.__unicode__()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/forms.py", line 425, in __str__
+    return self.as_widget()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 27, in as_widget
+    return old_as_widget(widget, attrs, only_initial)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 27, in as_widget
+    return old_as_widget(widget, attrs, only_initial)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/forms.py", line 475, in as_widget
+    return widget.render(name, self.value(), attrs=attrs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/widgets.py", line 504, in render
+    options = self.render_options(choices, [value])
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/widgets.py", line 528, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+ValueError: too many values to unpack
+Internal Server Error: /SMSApp/contacts/Tomdanizer/
+Traceback (most recent call last):
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/action/workspace/SMSReminder/SMSApp/views.py", line 309, in user_contacts
+    return render(request, 'SMSApp/user/user.html', context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader.py", line 169, in render_to_string
+    return t.render(context_instance)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 854, in render_node
+    return node.render(context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 897, in render
+    return render_value_in_context(output, context)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/template/base.py", line 875, in render_value_in_context
+    value = force_text(value)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/utils/encoding.py", line 100, in force_text
+    s = s.__unicode__()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/forms.py", line 425, in __str__
+    return self.as_widget()
+  File "/home/action/py27env/local/lib/python2.7/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 27, in as_widget
+    return old_as_widget(widget, attrs, only_initial)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 27, in as_widget
+    return old_as_widget(widget, attrs, only_initial)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/forms.py", line 475, in as_widget
+    return widget.render(name, self.value(), attrs=attrs)
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/widgets.py", line 504, in render
+    options = self.render_options(choices, [value])
+  File "/home/action/py27env/local/lib/python2.7/site-packages/django/forms/widgets.py", line 528, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+ValueError: too many values to unpack
