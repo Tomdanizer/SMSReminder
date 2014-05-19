@@ -3,31 +3,31 @@
 {% load widget_tweaks %}
 
        <form role="form" action="{% url 'add_contact' %}" method='post'>{% csrf_token %}
-            {{ form.non_field_errors }}
+            {{ addform.non_field_errors }}
             <div class="fieldWrapper">
-                {{ form.first_name.errors }}
+                {{ addform.first_name.errors }}
               <label for="username">First Name:</label>
-                {{ form.first_name|attr:"type:text" |add_class:"form-control" }}
+                {{ addform.first_name|attr:"type:text" |add_class:"form-control" }}
             </div>
             <div class="fieldWrapper">
-                {{ form.last_name.errors }}
+                {{ addform.last_name.errors }}
               <label for="password">Last Name:</label>
-                {{ form.last_name|attr:"type:text" |add_class:"form-control" }}
+                {{ addform.last_name|attr:"type:text" |add_class:"form-control" }}
             </div>
             <div class="fieldWrapper">
-                {{ form.phone_number.errors }}
+                {{ addform.phone_number.errors }}
               <label for="password">Phone Number:</label>
-                {{ form.phone_number|attr:"type:text" |add_class:"form-control" }}
+                {{ addform.phone_number|attr:"type:text" |add_class:"form-control" }}
             </div>
             <div class="fieldWrapper">
-                {{ form.network.errors }}
+                {{ addform.network.errors }}
               <label for="password">Network:</label>
-                {{ form.network|attr:"type:text" |add_class:"form-control" }}
+                {{ addform.network|attr:"type:text" |add_class:"form-control" }}
             </div>
             <div class="fieldWrapper">
-                {{ form.subject.errors }}
+                {{ addform.subject.errors }}
               <label for="remember">Add as favorite:</label>
-                {{ form.favorite|attr:"type:checkbox" }}
+                {{ addform.favorite|attr:"type:checkbox" }}
             </div>
             <div>
                     <button type="submit" class="btn btn-primary btn-lg btn-block">Add Contact</button>

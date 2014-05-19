@@ -6,8 +6,10 @@
         <div class="panel-heading">
             <h4 class="text-center">Upcoming Messages</h4>
         </div>
+                {% if messagequeue %}
         <form role="form" action="/SMSApp/delete_messages/" method='post'>{% csrf_token %}
             {{ form.non_field_errors }}
+
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -19,52 +21,46 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% if messagequeue %}
-                    {% for message in messagequeue %}
-                        <tr>
-                            <td>{{ forloop.counter0 }} </td>
-                            <td>{{ message.number }} </td>
-                            <td> {{ message.text }} </td>
-                            <td> {{ message.time }}</td>
-                            <td><input type="checkbox" name="{{ message.uuid }}"/></td>
-                        </tr>
-                    {% endfor %}
-                {% else %}
+
+                {% for message in messagequeue %}
                     <tr>
-                        <td>There are no messages to display</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{ forloop.counter0 }} </td>
+                        <td>{{ message.number }} </td>
+                        <td> {{ message.text }} </td>
+                        <td> {{ message.time }}</td>
+                        <td><input type="checkbox" name="{{ message.uuid }}"/></td>
                     </tr>
-                {% endif %}
+                {% endfor %}
                 </tbody>
             </table>
-            {% if messagequeue %}
-                <div class="div-button-center">
-                    <button class="btn btn-danger btn-lg">Delete Selected Messages</button>
-                </div>
-            {% endif %}
-        </form>
+            <div class="div-button-center">
+                <button class="btn btn-danger btn-lg">Delete Selected Messages</button>
+            </div>
 
+        </form>
+        {% else %}
+            <div class="panel-body text-center">
+                There are no messages to display
+            </div>
+        {% endif %}
     </div>
 
     <div class="panel panel-primary">
         <div class="panel-heading">
             <h4 class="text-center">Sent Messages</h4>
         </div>
+        {% if sentmessages %}
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Number</th>
+                    <th>Message</th>
+                    <th>Time</th>
+                </tr>
+                </thead>
+                <tbody>
 
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th>#</th>
-                <th>Number</th>
-                <th>Message</th>
-                <th>Time</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% if sentmessages %}
                 {% for message in sentmessages %}
                     <tr>
                         <td>{{ forloop.counter0 }} </td>
@@ -73,16 +69,12 @@
                         <td> {{ message.time }}</td>
                     </tr>
                 {% endfor %}
-            {% else %}
-                <tr>
-                    <td>There are no messages to display</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            {% endif %}
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        {% else %}
+            <div class="panel-body text-center">
+                There are no messages to display
+            </div>
+        {% endif %}
     </div>
 </div>

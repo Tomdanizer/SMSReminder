@@ -51,20 +51,31 @@ def about(request):
 def add_contact(request):
     if request.method == 'POST': # If the form has been submitted...
         # ContactForm was defined in the the previous section
-        form = BlockForm(request.POST) # A form bound to the POST data
+        form = AddContactForm(request.POST) # A form bound to the POST data
+
+
         user = request.user
+
         if form.is_valid(): # All validation rules pass
-            phone_number = form.cleaned_data['blacklist_phone_number']
-            num = BlackList.objects.create(number=phone_number)
-            messages.add_message(request, messages.INFO, 'The number has been successfully added to the blacklist.')
-            return redirect('index')
+            first_name = form.cleaned_data['first_name']
+            last_name = form.cleaned_data['last_name']
+            phone_number = form.cleaned_data['phone_number']
+            network = form.cleaned_data['network']
+            favorite = form.cleaned_data['favorite']
+            friend = Friends.objects.create(user=user, first_name=first_name, last_name = last_name,network=network, phone_number = phone_number, favorite=favorite)
+
+            messages.add_message(request, messages.INFO, 'Contact has been successfully added.')
+            return redirect('user_contacts', request.user)
 
         else:
-            messages.add_message(request, messages.ERROR, 'Invalid phone number entered. Please try again.')
-            return redirect('index')
+            friends = Friends.objects.filter(user=user)
+            profile = get_object_or_404(SMSUser, username=user)
+            messages.add_message(request, messages.ERROR, 'Invalid form. Please try again.')
+            context = {'pagetype': 'contacts', 'profile':profile, 'form':form, 'friends':friends}
+            return render(request, 'SMSApp/user/user.html', context)
     else:
-        messages.add_message(request, messages.INFO, 'There was an issue with your request. Please try again.')
-        return redirect('index')
+        messages.add_message(request, messages.ERROR, 'There was an issue with your request. Please try again.')
+        return redirect('user_contacts', request.user)
 
 def blocknumber_confirm(request):
     if request.method == 'POST': # If the form has been submitted...
@@ -81,7 +92,7 @@ def blocknumber_confirm(request):
             messages.add_message(request, messages.ERROR, 'Invalid phone number entered. Please try again.')
             return redirect('index')
     else:
-        messages.add_message(request, messages.INFO, 'There was an issue with your request. Please try again.')
+        messages.add_message(request, messages.ERROR, 'There was an issue with your request. Please try again.')
         return redirect('index')
 
 
@@ -111,7 +122,11 @@ def delete_messages(request):
   else:
     messages.add_message(request, messages.ERROR, 'There was an error with your request. Please try again')
     return redirect('user_messages', user)
-    
+
+def edit_contact(request):
+    user = request.user
+    if(request.method == 'POST'):
+        return direct('user_contacts',user)
 
 def faq(request):
   return render(request, 'SMSApp/faq.html')
@@ -300,12 +315,37 @@ def reset(request):
         subject_template_name='SMSApp/sections/pwreset/password_reset_subject.txt',
         post_reset_redirect=reverse('reset_sent'), extra_context={'form':form})
 
-def user_contacts(request, username):
+def user_contacts(request, username, action="favorite", search=""):
     user = request.user
     if user.username == username:
         profile = get_object_or_404(SMSUser, username=username)
-        form = AddContactForm()
-        context = {'pagetype': 'contacts', 'profile':profile, 'form':form}
+        addform = AddContactForm()
+        editform = AddContactForm()
+        msgform = ReminderForm()
+        if action == 'delete':
+            Friends.objects.filter(uuid=search).update(deleted=True)
+            friends = Friends.objects.filter(user=user, deleted=False).order_by('first_name')
+            messages.add_message(request, messages.ERROR, "Contact has been deleted. <a href=../../../" + username + "/undo/" + search  + ">Undo</a>")
+        elif action == 'undo':
+            Friends.objects.filter(uuid=search, deleted=True).update(deleted=False)
+            friends = Friends.objects.filter(user=user, deleted=False).order_by('-favorite', 'first_name' )
+            messages.add_message(request, messages.INFO, "Contact has been restored")
+        elif search != "":
+            friends = Friends.objects.filter(user=user, first_name=search, deleted=False)
+        elif action == "favorite":
+            friends = Friends.objects.filter(user=user, deleted=False).order_by('-favorite', 'first_name' )
+        elif action == "recent":
+            friends = Friends.objects.filter(user=user, deleted=False).order_by('last_message', 'first_name')
+        elif action == "az":
+            friends = Friends.objects.filter(user=user, deleted=False).order_by('first_name')
+        elif action == "za":
+            friends = Friends.objects.filter(user=user, deleted=False).order_by('-first_name')
+        else:
+            friends = Friends.objects.filter(user=user, deleted=False).order_by('first_name')
+
+
+
+        context = {'pagetype': 'contacts', 'profile':profile, 'addform':addform, 'editform':editform, 'msgform':msgform, 'friends':friends}
         return render(request, 'SMSApp/user/user.html', context)
     else:
         raise Http404
@@ -317,7 +357,8 @@ def user_dashboard(request, username):
         form = ReminderForm()
         messages = Message.objects.all().filter(user=request.user, sent=False, cancelled = False)[:5]
         sentmessages = Message.objects.all().filter(user=request.user, sent=True, cancelled = False)[:5]
-        context = {'pagetype': 'dashboard','form':form, 'profile':profile, 'sentmessages':sentmessages, 'messagequeue':messages}
+        friends = Friends.objects.filter(user=user).order_by('last_message')[:4]
+        context = {'pagetype': 'dashboard','form':form, 'profile':profile, 'sentmessages':sentmessages, 'messagequeue':messages, 'friends':friends}
         return render(request, 'SMSApp/user/user.html', context)
     else:
         raise Http404

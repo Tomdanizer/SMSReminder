@@ -1,0 +1,90 @@
+{% load widget_tweaks %}
+{% load staticfiles %}
+
+     
+
+       <form id="reminder_form" role="form" action="/SMSApp/submitsms/" method='post'>{% csrf_token %}
+            {% if msgform.non_field_errors %}
+              {% include "SMSApp/base/form_nonfield_errors.html" %}
+            {% endif %}
+
+            <div class="fieldWrapper">
+              {% if msgform.phone_number.errors %}
+                <div class="form-group has-error has-feedback">
+                    {% for err in msgform.phone_number.errors %}
+                    {{ err }}
+                    {% endfor %}
+                {{ msgform.phone_number|attr:"type:tel" |attr:"placeholder:(888) 123-4567   or   888-123-4567   or   888 123 4567   or   8881234567"|add_class:"hidden form-control" }}
+                   <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+              {% else %}
+                {{ msgform.phone_number|attr:"type:tel" |attr:"placeholder:(888) 123-4567   or   888-123-4567   or   888 123 4567   or   8881234567"|add_class:"hidden form-control" }}
+              {% endif %}
+            </div>
+
+
+            <div class="fieldWrapper">
+              {% if msgform.date.errors %}
+
+                <div class="form-group has-error has-feedback">
+                  <label for="date">Step 1: Date -
+                    {% for err in msgform.date.errors %}
+                    {{ err }}
+                    {% endfor %}
+                  </label>
+                  <div class='contactdatetimepicker input-group date ' data-date-format="YYYY-MM-DD hh:mm A">
+                    {{ msgform.date2|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"form-control" }}                       <span class="input-group-addon "><span class="glyphicon glyphicon-calendar"></span></span>
+                  </div>
+                {{ msgform.date|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"hidden form-control" }}
+                  <span id="date-field-error" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+
+              {% else %}
+
+                <label for="date">Step 1: Date</label>
+                  <div  class='contactdatetimepicker input-group date' data-date-format="YYYY-MM-DD hh:mm A">
+                    {{ msgform.date2|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"form-control" }}                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar">
+                        </span>
+                    </span>
+                  </div>
+                    {{ msgform.date|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"hidden form-control" }}
+              {% endif %}
+            </div>
+
+
+            <div class="fieldWrapper">
+              {% if msgform.message.errors %}
+                <div class="form-group has-error has-feedback">
+                  <label for="message">Step 2: Message -
+                    {% for err in msgform.message.errors %}
+                    {{ err }}
+                    {% endfor %}
+                  </label>
+                {{ msgform.message|attr:"type:text" |attr:"placeholder:  Bury grandma at 1pm"|add_class:"form-control" }}
+                   <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+              {% else %}
+                <label for="message">Step 2: Message</label>
+                {{ msgform.message|attr:"type:text" |attr:"placeholder:  Bury grandma at 1pm"|add_class:"form-control" }}
+              {% endif %}
+            </div>
+
+            <div class="fieldWrapper">
+              {% if msgform.network.errors %}
+                <div class="form-group has-error has-feedback">
+                    {% for err in msgform.network.errors %}
+                    {{ err }}
+                    {% endfor %}
+                  {{ msgform.network|attr:"type:text" |attr:"placeholder:  txt.att.net"|add_class:"hidden form-control" }}
+                   <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+              {% else %}
+                {{ msgform.network|attr:"type:text" |attr:"placeholder:  txt.att.net"|add_class:"hidden form-control" }}
+              {% endif %}
+            </div>
+
+            <div class="div-button-center">
+                    <button id="remind_me_submit" type="submit" class="btn btn-primary btn-lg center-button">Remind!</button>
+            </div>
+          </form>

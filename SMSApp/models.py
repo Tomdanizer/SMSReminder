@@ -25,5 +25,12 @@ class BlackList(models.Model):
 
 class Friends(models.Model):
     user = models.ForeignKey('SMSUser', related_name='user')
-    friend = models.ForeignKey('SMSUser', related_name='friend')
-  
+    uuid = UUIDField(auto=True)
+    first_name = models.CharField(max_length=25, blank=False, null=False)
+    last_name = models.CharField(max_length=20)
+    phone_number = models.CharField(max_length=12, unique=False, blank=False, null=False)
+    network = models.CharField(max_length=20, blank=False, null=False)
+    last_message = models.DateTimeField(blank=True, null=True)
+    favorite = models.BooleanField(default = False)
+    deleted = models.BooleanField(default = False)
+

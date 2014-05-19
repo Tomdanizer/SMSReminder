@@ -138,8 +138,32 @@ NETWORK_CHOICES = (
 )
 
 class AddContactForm(forms.Form):
-    first_name = forms.CharField(max_length=20)
+    first_name = forms.CharField(max_length=20, required = True)
     last_name = forms.CharField(max_length=20)
-    phone_number = USPhoneNumberField()
+    phone_number = USPhoneNumberField(required = True)
     network = forms.CharField(max_length=80, required = True, widget=forms.Select(choices=NETWORK_CHOICES))
-    favorite = forms.BooleanField()
+    favorite = forms.BooleanField(initial=False, required = False)
+
+    def clean(self):
+        first_name = self.cleaned_data.get('first_name')
+        last_name = self.cleaned_data.get('last_name')
+        phone_number = self.cleaned_data.get('phone_number')
+        network = self.cleaned_data.get('network')
+        favorite = self.cleaned_data.get('favorite')
+        error_messages = []
+
+
+
+        if not first_name:
+            error_messages.append("A first name is required")
+
+        if not phone_number:
+            error_messages.append("A phone number is required")
+
+        if not network:
+            error_messages.append("A network selection is required")
+
+        if len(error_messages):
+            raise ValidationError(error_messages)
+
+        return self.cleaned_data

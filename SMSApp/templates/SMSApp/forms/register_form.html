@@ -4,7 +4,7 @@
 
  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="{% static 'SMSApp/styles.css' %}" />
-      <div class="col-md-4">
+
        <form id="reminder_form" role="form" action="/SMSApp/register_confirm/" method='post'>{% csrf_token %}
             {% if form.non_field_errors %}
               {% include "SMSApp/base/form_nonfield_errors.html" %}
@@ -171,4 +171,3 @@
                     <button type="submit" class="btn btn-primary btn-lg">Create my account!</button>
             </div>
           </form>
-      </div> 

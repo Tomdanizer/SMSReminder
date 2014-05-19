@@ -1,0 +1,35 @@
+{% load staticfiles %}
+{% load webdesign %}
+{% load widget_tweaks %}
+
+       <form role="form" action="{% url 'edit_contact' %}" method='post'>{% csrf_token %}
+            {{ editform.non_field_errors }}
+            <div class="fieldWrapper">
+                {{ editform.first_name.errors }}
+              <label for="username">First Name:</label>
+                {{ editform.first_name|attr:"type:text" |add_class:"form-control" }}
+            </div>
+            <div class="fieldWrapper">
+                {{ editform.last_name.errors }}
+              <label for="password">Last Name:</label>
+                {{ editform.last_name|attr:"type:text" |add_class:"form-control" }}
+            </div>
+            <div class="fieldWrapper">
+                {{ editform.phone_number.errors }}
+              <label for="password">Phone Number:</label>
+                {{ editform.phone_number|attr:"type:text" |add_class:"form-control" }}
+            </div>
+            <div class="fieldWrapper">
+                {{ editform.network.errors }}
+              <label for="password">Network:</label>
+                {{ editform.network|attr:"type:text" |add_class:"form-control" }}
+            </div>
+            <div class="fieldWrapper">
+                {{ editform.subject.errors }}
+              <label for="remember">Add as favorite:</label>
+                {{ editform.favorite|attr:"type:checkbox" }}
+            </div>
+            <div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Save Changes</button>
+            </div>
+          </form>

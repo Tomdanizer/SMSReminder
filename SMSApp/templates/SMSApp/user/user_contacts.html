@@ -12,16 +12,26 @@
         <div class="panel-body panel-controls">
                         <div class="text-center col-xs-12 col-sm-4 col-md-4 col-lg-4">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-default">Favs</button>
-                  <button type="button" class="btn btn-default">Most Recent</button>
-                  <button type="button" class="btn btn-default">A-Z</button>
+                  <button type="button" class="btn btn-default">
+                      <a href="{% url 'user_contacts' user 'favorite'%}">Favs</a>
+
+                  </button>
+                  <button type="button" class="btn btn-default">
+                      <a href="{% url 'user_contacts' user 'recent'%}">Most Recent</a>
+                  </button>
+                  <button type="button" class="btn btn-default">
+                      <a href="{% url 'user_contacts' user 'az'%}">A-Z</a>
+                  </button>
+                  <button type="button" class="btn btn-default">
+                      <a href="{% url 'user_contacts' user 'za'%}">Z-A</a>
+                  </button>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
                 <div class="input-group">
                   <input type="text" class="form-control">
                   <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Search</button>
+                    <button id="contact_search" class="btn btn-default" type="button"><a href="{% url 'user_contacts' user 'search' 'Cash' %}">Search</a></button>
                   </span>
                 </div><!-- /input-group -->
               </div><!-- /.col-lg-6 -->
@@ -32,94 +42,47 @@
             </div>
         {#    Contact listings#}
       <div class="panel-body">
-              <li class="contact-item">
+      {% if friends %}
+          {%  for friend in friends %}
+              <li class="contact-item" data-first='{{ friend.first_name }}' data-last='{{ friend.last_name }}' data-number='{{ friend.phone_number }}' data-network='{{ friend.network }}' data-favorite='{{ friend.favorite }}'>
                   <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="panel panel-info favorite">
+                      <div class="panel panel-info {% if friend.favorite == True %}favorite {% endif %}">
                           <div class="panel-heading ">
-                              <div class="panel-title">Daniel Thomiszer
-                              <span class="glyphicon glyphicon-remove contact-icon"></span>
-                              <span class="glyphicon glyphicon-edit contact-icon"></span>
-                              <span class="glyphicon glyphicon-star contact-icon"></span>
+                              <div class="panel-title"  >{{ friend.first_name }} {{ friend.last_name }}
+                              <a href="{% url 'user_contacts' user 'delete' friend.uuid%}">
+                                  <span class="hoverhand glyphicon glyphicon-remove contact-icon"></span>
+                              </a>
+                              <span  data-container="body" data-toggle="popover" data-placement="bottom" class="hoverhand glyphicon glyphicon-edit contact-icon"></span>
+                              {% if friend.favorite == True %}
+                                   <span class="glyphicon glyphicon-star contact-icon"></span>
+                              {% else %}
+                                   <span class="glyphicon glyphicon-star-empty contact-icon"></span>
+                              {% endif %}
+
                               </div>
                           </div>
                           <div class="panel-body">
-                              <div>
-                                  708-263-5932
+                              <div >
+                                  {{ friend.phone_number }}
                               </div>
-                              <div>
-                                  Last messaged 3 days ago
-                                  <span class="glyphicon glyphicon-envelope contact-icon"></span>
+                              <div >
+                                  {% if friend.phone_number != None %}
+                                    {{ friend.last_message }}
+                                  {% else %}
+                                  Never
+                                  {% endif %}
+                                  <span  data-container="body" data-toggle="popover" data-placement="bottom" class="hoverhand glyphicon glyphicon-envelope contact-icon"></span>
                               </div>
                           </div>
                       </div>
                   </div>
               </li>
-              <li class="contact-item">
-                  <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="panel panel-info">
-                          <div class="panel-heading">
-                              <div class="panel-title">Daniel Thomiszer
-                              <span class="glyphicon glyphicon-remove contact-icon"></span>
-                                  <span class="glyphicon glyphicon-edit contact-icon"></span>
-                              <span class="glyphicon glyphicon-star-empty contact-icon"></span>
-                              </div>
-                          </div>
-                          <div class="panel-body">
-                              <div>
-                                  708-263-5932
-                              </div>
-                              <div>
-                                  Last messaged 3 days ago
-                                  <span class="glyphicon glyphicon-envelope contact-icon"></span>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </li>
-              <li class="contact-item">
-                  <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="panel panel-info">
-                          <div class="panel-heading">
-                              <div class="panel-title">Daniel Thomiszer
-                              <span class="glyphicon glyphicon-remove contact-icon"></span>
-                                  <span class="glyphicon glyphicon-edit contact-icon"></span>
-                                  <span class="glyphicon glyphicon-star-empty contact-icon"></span>
-                              </div>
-                          </div>
-                          <div class="panel-body">
-                              <div>
-                                  708-263-5932
-                              </div>
-                              <div>
-                                  Last messaged 3 days ago
-                                  <span class="glyphicon glyphicon-envelope contact-icon"></span>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </li>
-              <li class="contact-item">
-                  <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="panel panel-info">
-                          <div class="panel-heading">
-                              <div class="panel-title">Daniel Thomiszer
-                              <span class="glyphicon glyphicon-remove contact-icon"></span>
-                                  <span class="glyphicon glyphicon-edit contact-icon"></span>
-                                  <span class="glyphicon glyphicon-star-empty contact-icon"></span>
-                              </div>
-                          </div>
-                          <div class="panel-body">
-                              <div>
-                                  708-263-5932
-                              </div>
-                              <div>
-                                  Last messaged 3 days ago
-                                  <span class="glyphicon glyphicon-envelope contact-icon"></span>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </li>
+
+          {% endfor %}
+          {% else %}
+          <p class="text-center"> Well this is embarrassing, you have no friends. Perhaps you should add one!</p>
+
+      {% endif %}
       </div>
         </div>
     </div>
@@ -145,6 +108,12 @@
 <div class="popoverContent hide">
   {% include "SMSApp/forms/add_contact_form.html" %}
 </div>
+<div class="popoverEditContent hide">
+  {% include "SMSApp/forms/edit_contact_form.html" %}
+</div>
+<div class="popoverMessageContent hide">
+  {% include "SMSApp/forms/message_contact_form.html" %}
+</div>
 <script>
     $('#contactAdd').popover({
         html: true,
@@ -152,4 +121,48 @@
             return $(".popoverContent").html();
         }
     })
+    $('.glyphicon-envelope').popover({
+        html: true,
+        content: function(e){
+            return $(".popoverMessageContent").html();
+        }
+    })
+    $('.glyphicon-edit').popover({
+        html: true,
+        content: function(){
+            return  $(".popoverEditContent").html();
+        }
+    })
+    $('.glyphicon-envelope').on('shown.bs.popover', function(){
+        $('.contactdatetimepicker').datetimepicker();
+                var contactItem = $(this).parents('.contact-item'),
+                phonenumber = contactItem.data("number"),
+                network = contactItem.data("network"),
+                popover = $('.popover-content');
+            $('#id_phone_number', popover).val(phonenumber);
+            $('#id_network', popover).val(network);
+    });
+    $('.glyphicon-edit').on('shown.bs.popover', function(){
+                var contactItem = $(this).parents('.contact-item'),
+                firstname = contactItem.data("first"),
+                lastname = contactItem.data("last"),
+                phonenumber = contactItem.data("number"),
+                network = contactItem.data("network"),
+                popover = $('.popover-content');
+            $('#id_first_name', popover).val(firstname);
+            $('#id_last_name', popover).val(lastname);
+            $('#id_phone_number', popover).val(phonenumber);
+            $('#id_network', popover).val(network);
+
+    });
+    $('body').on('click', function (e) {
+        $('[data-toggle="popover"]').each(function () {
+            //the 'is' for buttons that trigger popups
+            //the 'has' for icons within a button that triggers a popup
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+            }
+        });
+    });
+
 </script>

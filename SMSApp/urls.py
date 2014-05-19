@@ -19,6 +19,7 @@ urlpatterns = patterns('',
     ####### USER ########
     # USER MANAGEMENT URLS
     url(r'^add_contact/$', views.add_contact, name='add_contact'),
+    url(r'^edit_contact/$', views.edit_contact, name='edit_contact'),
     url(r'^delete_messages/$', views.delete_messages, name='delete_messages'),
     url(r'^update_password/$', views.update_password, name='update_password'),
     url(r'^update_profile/$', views.update_profile, name='update_profile'),
@@ -31,7 +32,10 @@ urlpatterns = patterns('',
 
     # USER URLS
     url(r'^dashboard/(?P<username>\w+)/$', views.user_dashboard, name='user_dashboard'),
+
     url(r'^contacts/(?P<username>\w+)/$', views.user_contacts, name='user_contacts'),
+    url(r'^contacts/(?P<username>\w+)/(?P<action>\w+)/$', views.user_contacts, name='user_contacts'),
+    url(r'^contacts/(?P<username>\w+)/(?P<action>\w+)/(?P<search>\w+)/$', views.user_contacts, name='user_contacts'),
     url(r'^profile/(?P<username>\w+)/$', views.user_profile, name='user_profile'),
     url(r'^messages/(?P<username>\w+)/$', views.user_messages, name='user_messages'),
     url(r'^password/(?P<username>\w+)/$', views.user_password, name='user_password'),
