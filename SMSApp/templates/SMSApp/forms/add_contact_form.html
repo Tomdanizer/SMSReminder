@@ -4,6 +4,7 @@
 
        <form role="form" action="{% url 'add_contact' %}" method='post'>{% csrf_token %}
             {{ addform.non_field_errors }}
+
             <div class="fieldWrapper">
                 {{ addform.first_name.errors }}
               <label for="username">First Name:</label>

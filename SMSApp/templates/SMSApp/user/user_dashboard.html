@@ -73,11 +73,10 @@
                         <tbody>
                         {% for message in messagequeue %}
                             <tr>
-                                <td>{{ forloop.counter0 }} </td>
-                                <td>{{ message.number }} </td>
-                                <td> {{ message.text }} </td>
-                                <td> {{ message.time }}</td>
-                                <td><input type="checkbox" name="{{ message.uuid }}"/></td>
+                                <td>{{ forloop.counter0 }}</td>
+                                <td>{{ message.number }}</td>
+                                <td>{{ message.text }}</td>
+                                <td>{{ message.time }}</td>
                             </tr>
                         {% endfor %}
                         </tbody>

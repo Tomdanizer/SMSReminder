@@ -4,6 +4,8 @@
 
        <form role="form" action="{% url 'edit_contact' %}" method='post'>{% csrf_token %}
             {{ editform.non_field_errors }}
+                           {{ addform.uuid.errors }}
+                {{ addform.uuid|attr:"type:text" |add_class:"hidden form-control" }}
             <div class="fieldWrapper">
                 {{ editform.first_name.errors }}
               <label for="username">First Name:</label>

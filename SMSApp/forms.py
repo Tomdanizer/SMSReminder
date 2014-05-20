@@ -138,6 +138,7 @@ NETWORK_CHOICES = (
 )
 
 class AddContactForm(forms.Form):
+    uuid = forms.CharField(max_length=50, required = False)
     first_name = forms.CharField(max_length=20, required = True)
     last_name = forms.CharField(max_length=20)
     phone_number = USPhoneNumberField(required = True)

@@ -29,9 +29,9 @@
             </div>
             <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
                 <div class="input-group">
-                  <input type="text" class="form-control">
+                  <input id='contact_search' type="text" class="form-control">
                   <span class="input-group-btn">
-                    <button id="contact_search" class="btn btn-default" type="button"><a href="{% url 'user_contacts' user 'search' 'Cash' %}">Search</a></button>
+                    <button id="contact_search" class="btn btn-default" type="button"><a id="contact_search_url" href="{% url 'user_contacts' user 'search' %}">Search</a></button>
                   </span>
                 </div><!-- /input-group -->
               </div><!-- /.col-lg-6 -->
@@ -44,7 +44,7 @@
       <div class="panel-body">
       {% if friends %}
           {%  for friend in friends %}
-              <li class="contact-item" data-first='{{ friend.first_name }}' data-last='{{ friend.last_name }}' data-number='{{ friend.phone_number }}' data-network='{{ friend.network }}' data-favorite='{{ friend.favorite }}'>
+              <li class="contact-item" data-uuid='{{ friend.uuid }}' data-first='{{ friend.first_name }}' data-last='{{ friend.last_name }}' data-number='{{ friend.phone_number }}' data-network='{{ friend.network }}' data-favorite='{{ friend.favorite }}'>
                   <div class="col-sm-6 col-md-4 col-lg-3">
                       <div class="panel panel-info {% if friend.favorite == True %}favorite {% endif %}">
                           <div class="panel-heading ">
@@ -115,26 +115,35 @@
   {% include "SMSApp/forms/message_contact_form.html" %}
 </div>
 <script>
+    
+    var popoverContent = $(".popoverContent").html();
+    $(".popoverContent").remove();
+    var popoverMessageContent = $(".popoverMessageContent").html();
+    $(".popoverMessageContent").remove();
+    var popovereditContent = $(".popoverEditContent").html();
+    var contactSearchUrl = $('#contact_search_url').attr('href');
+    $(".popoverEditContent").remove();
     $('#contactAdd').popover({
         html: true,
         content: function(){
-            return $(".popoverContent").html();
+            return popoverContent;
         }
     })
     $('.glyphicon-envelope').popover({
         html: true,
         content: function(e){
-            return $(".popoverMessageContent").html();
+            return popoverMessageContent;
         }
     })
     $('.glyphicon-edit').popover({
         html: true,
         content: function(){
-            return  $(".popoverEditContent").html();
+            return  popovereditContent;
         }
     })
     $('.glyphicon-envelope').on('shown.bs.popover', function(){
-        $('.contactdatetimepicker').datetimepicker();
+        dateHander();
+
                 var contactItem = $(this).parents('.contact-item'),
                 phonenumber = contactItem.data("number"),
                 network = contactItem.data("network"),
@@ -144,15 +153,19 @@
     });
     $('.glyphicon-edit').on('shown.bs.popover', function(){
                 var contactItem = $(this).parents('.contact-item'),
+                uuid = contactItem.data("uuid"),
                 firstname = contactItem.data("first"),
                 lastname = contactItem.data("last"),
                 phonenumber = contactItem.data("number"),
                 network = contactItem.data("network"),
+                favorite = contactItem.data("favorite") == "True" ? true:false,
                 popover = $('.popover-content');
+            $('#id_uuid', popover).val(uuid);
             $('#id_first_name', popover).val(firstname);
             $('#id_last_name', popover).val(lastname);
             $('#id_phone_number', popover).val(phonenumber);
             $('#id_network', popover).val(network);
+            $('#id_favorite', popover).prop("checked",favorite);
 
     });
     $('body').on('click', function (e) {
@@ -165,4 +178,43 @@
         });
     });
 
+    $('#contact_search').on('input', function (e){
+        $('#contact_search_url').attr("href",contactSearchUrl + this.value );
+    });
+
+    var dateHander = function(){
+        var datepicker = $('.contactdatetimepicker')
+        datepicker.datetimepicker();
+          $("#remind_me_submit").click(function(e){
+          var date = datepicker.data("DateTimePicker");
+
+          if(date !== null){
+            e.preventDefault();
+            date = moment(date).zone('-0500').format('YYYY-MM-DD HH:mm');
+            $("#id_date").val(date);
+            $("#reminder_form").submit();
+          }else{
+
+          }
+
+      })
+
+      $("#id_date2").on("input", function(e){
+          datepicker.data("DateTimePicker", null);
+          console.log(e);
+          $("#id_date").val(this.value)
+      });
+
+      datepicker.on("dp.show", function(e){
+          console.log(e);
+          // $("#id_date2").val("")
+          // $("#id_date").val(this.value)
+      });
+      datepicker.on("dp.change", function(e){
+          datepicker.data("DateTimePicker", e.date);
+          console.log(e);
+          // $("#id_date2").val("")
+          // $("#id_date").val(this.value)
+      });
+    }
 </script>

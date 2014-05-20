@@ -126,8 +126,24 @@ def delete_messages(request):
 def edit_contact(request):
     user = request.user
     if(request.method == 'POST'):
-        return direct('user_contacts',user)
-
+        form = AddContactForm(request.POST) # A form bound to the POST data
+        if form.is_valid(): # All validation rules pass
+            uuid = form.cleaned_data['uuid']
+            first_name = form.cleaned_data['first_name']
+            last_name = form.cleaned_data['last_name']
+            phone_number = form.cleaned_data['phone_number']
+            network = form.cleaned_data['network']
+            favorite = form.cleaned_data['favorite']
+            Friends.objects.filter(uuid=uuid).update(first_name=first_name, last_name=last_name, phone_number=phone_number,network=network, favorite=favorite)
+            messages.add_message(request, messages.INFO, 'Contact has been successfully updated')
+            return redirect('user_contacts', user)
+            #Frine
+        else:
+            messages.add_message(request, messages.ERROR, 'There was an error updating the contact. Please try again.')
+            return redirect('user_contacts', user)
+    else:
+        messages.add_message(request, messages.ERROR, 'There was an error with processing your request. Please try again.')
+        return redirect('user_contacts', user)
 def faq(request):
   return render(request, 'SMSApp/faq.html')
   
@@ -159,7 +175,7 @@ def signout_confirm(request):
     messages.add_message(request, messages.INFO, 'You have been successfully logged out.')
     return redirect('index')
   
-def smsconfirm(request):
+def smsconfirm(request, source="index"):
     if request.method == 'POST': # If the form has been submitted...
         # ContactForm was defined in the the previous section
         form = ReminderForm(request.POST) # A form bound to the POST data
@@ -189,7 +205,10 @@ def smsconfirm(request):
             if not BlackList.objects.filter(number=phone_number):
               queueMessage(request.user, phone_number, message, time, network)
               messages.add_message(request, messages.INFO, 'Your message has been created!')
-              return redirect('index')
+              if source =="index":
+                return redirect('index')
+              else:
+                return redirect(source, request.user)
 
             else:
                 messages.add_message(request, messages.ERROR, 'This number has been blacklisted.')
@@ -331,7 +350,7 @@ def user_contacts(request, username, action="favorite", search=""):
             friends = Friends.objects.filter(user=user, deleted=False).order_by('-favorite', 'first_name' )
             messages.add_message(request, messages.INFO, "Contact has been restored")
         elif search != "":
-            friends = Friends.objects.filter(user=user, first_name=search, deleted=False)
+            friends = Friends.objects.filter(user=user, first_name__contains=search, deleted=False)
         elif action == "favorite":
             friends = Friends.objects.filter(user=user, deleted=False).order_by('-favorite', 'first_name' )
         elif action == "recent":

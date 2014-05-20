@@ -26,7 +26,25 @@
       <file leaf-file-name="user_contacts.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user_contacts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="7" selection-start="6389" selection-end="6389" vertical-scroll-proportion="0.47914183" vertical-offset="2315" max-vertical-offset="3287">
+            <state line="117" column="4" selection-start="5532" selection-end="5532" vertical-scroll-proportion="0.34841076" vertical-offset="1938" max-vertical-offset="4275">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_dashboard.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user_dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="32" selection-start="3106" selection-end="3106" vertical-scroll-proportion="-57.0" vertical-offset="0" max-vertical-offset="2470">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_reminder_form.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/user_reminder_form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="35" selection-start="3267" selection-end="3267" vertical-scroll-proportion="-8.444445" vertical-offset="969" max-vertical-offset="2717">
               <folding />
             </state>
           </provider>
@@ -35,8 +53,16 @@
       <file leaf-file-name="edit_contact_form.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/edit_contact_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="60" selection-start="654" selection-end="654" vertical-scroll-proportion="-3.2439024" vertical-offset="0" max-vertical-offset="779">
-              <folding />
+            <state line="37" column="0" selection-start="1714" selection-end="1714" vertical-scroll-proportion="-26.037037" vertical-offset="0" max-vertical-offset="817">
+              <folding>
+                <marker date="1400546075265" expanded="true" signature="142:1712" placeholder="..." />
+                <marker date="1400546075265" expanded="true" signature="379:588" placeholder="..." />
+                <marker date="1400546075265" expanded="true" signature="627:833" placeholder="..." />
+                <marker date="1400546075265" expanded="true" signature="872:1087" placeholder="..." />
+                <marker date="1400546075265" expanded="true" signature="1126:1326" placeholder="..." />
+                <marker date="1400546075265" expanded="true" signature="1365:1552" placeholder="..." />
+                <marker date="1400546075265" expanded="true" signature="1570:1694" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,7 +70,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SMSApp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="46" selection-start="956" selection-end="956" vertical-scroll-proportion="-13.68" vertical-offset="0" max-vertical-offset="874">
+            <state line="12" column="14" selection-start="551" selection-end="551" vertical-scroll-proportion="-6.84" vertical-offset="0" max-vertical-offset="893">
               <folding />
             </state>
           </provider>
@@ -53,7 +79,7 @@
       <file leaf-file-name="add_contact_form.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/add_contact_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="38" selection-start="486" selection-end="486" vertical-scroll-proportion="-2.5487804" vertical-offset="0" max-vertical-offset="779">
+            <state line="6" column="0" selection-start="202" selection-end="202" vertical-scroll-proportion="-4.2222223" vertical-offset="0" max-vertical-offset="798">
               <folding />
             </state>
           </provider>
@@ -62,8 +88,10 @@
       <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SMSApp/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="169" column="0" selection-start="6286" selection-end="6286" vertical-scroll-proportion="-31.64" vertical-offset="2173" max-vertical-offset="3078">
-              <folding />
+            <state line="128" column="67" selection-start="4957" selection-end="4957" vertical-scroll-proportion="-28.88" vertical-offset="1710" max-vertical-offset="3344">
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,16 +99,7 @@
       <file leaf-file-name="message_contact_form.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/message_contact_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="2148" selection-end="2148" vertical-scroll-proportion="3.097561" vertical-offset="1014" max-vertical-offset="1824">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SMSApp/static/SMSApp/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="46" selection-start="2965" selection-end="2965" vertical-scroll-proportion="-16.384615" vertical-offset="1341" max-vertical-offset="2451">
+            <state line="25" column="38" selection-start="1198" selection-end="1198" vertical-scroll-proportion="-17.592592" vertical-offset="0" max-vertical-offset="1824">
               <folding />
             </state>
           </provider>
@@ -89,7 +108,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SMSApp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="1731" selection-end="1731" vertical-scroll-proportion="-26.6" vertical-offset="0" max-vertical-offset="798">
+            <state line="27" column="31" selection-start="1254" selection-end="1281" vertical-scroll-proportion="-20.52" vertical-offset="0" max-vertical-offset="798">
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -100,16 +119,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SMSApp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="116" selection-start="2322" selection-end="2322" vertical-scroll-proportion="-6.65" vertical-offset="228" max-vertical-offset="8531">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SMSApp/static/SMSApp/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="22" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8664">
+            <state line="337" column="23" selection-start="15268" selection-end="15268" vertical-scroll-proportion="-5.117647" vertical-offset="5686" max-vertical-offset="8892">
               <folding />
             </state>
           </provider>
@@ -147,7 +157,6 @@
         <option value="$PROJECT_DIR$/SMSReminder/settings.py" />
         <option value="$PROJECT_DIR$/SMSApp/functions.py" />
         <option value="$PROJECT_DIR$/SMSApp/tasks.py" />
-        <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/user_reminder_form.html" />
         <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user.html" />
         <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user_menu.html" />
         <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user_profile.html" />
@@ -157,18 +166,19 @@
         <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/sections/signin.html" />
         <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/sections/register.html" />
         <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/register_form.html" />
-        <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user_dashboard.html" />
         <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user_messages.html" />
         <option value="$PROJECT_DIR$/SMSApp/managers.py" />
         <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/base/messages.html" />
         <option value="$PROJECT_DIR$/SMSApp/models.py" />
-        <option value="$PROJECT_DIR$/SMSApp/forms.py" />
+        <option value="$PROJECT_DIR$/SMSApp/static/SMSApp/styles.css" />
         <option value="$PROJECT_DIR$/SMSApp/urls.py" />
+        <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/message_contact_form.html" />
+        <option value="$PROJECT_DIR$/SMSApp/forms.py" />
         <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/add_contact_form.html" />
         <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/edit_contact_form.html" />
-        <option value="$PROJECT_DIR$/SMSApp/static/SMSApp/styles.css" />
-        <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/message_contact_form.html" />
         <option value="$PROJECT_DIR$/SMSApp/views.py" />
+        <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user_dashboard.html" />
+        <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/user_reminder_form.html" />
         <option value="$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user_contacts.html" />
       </list>
     </option>
@@ -528,7 +538,27 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SMSReminder" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
@@ -554,27 +584,7 @@
       <option name="customRunCommand" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SMSReminder" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -682,7 +692,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495333" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14640357" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18714195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -690,11 +700,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22971429" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -712,9 +722,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19951485" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -783,9 +793,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/sections/menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="108" selection-start="488" selection-end="488" vertical-scroll-proportion="-5.6296296" vertical-offset="0" max-vertical-offset="475">
-          <folding />
-        </state>
+        <state line="8" column="108" selection-start="488" selection-end="488" vertical-scroll-proportion="-5.6296296" vertical-offset="0" max-vertical-offset="475" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/blocknumber_form.html">
@@ -795,9 +803,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/sections/blocknumber.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="12" selection-start="711" selection-end="711" vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="551">
-          <folding />
-        </state>
+        <state line="18" column="12" selection-start="711" selection-end="711" vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="551" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/sections/pricing.html">
@@ -854,13 +860,6 @@
         <state line="0" column="0" selection-start="0" selection-end="20" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="551" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/user_reminder_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="32" selection-start="4987" selection-end="4987" vertical-scroll-proportion="0.0" vertical-offset="1881" max-vertical-offset="2489">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/profile_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="827">
@@ -870,9 +869,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user_profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="166" selection-end="535" vertical-scroll-proportion="-2.1111112" vertical-offset="0" max-vertical-offset="361">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="166" selection-end="535" vertical-scroll-proportion="-2.1111112" vertical-offset="0" max-vertical-offset="361" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user_password.html">
@@ -882,23 +879,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/sections/reminder.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="3" selection-start="323" selection-end="372" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="437">
-          <folding />
-        </state>
+        <state line="9" column="3" selection-start="323" selection-end="372" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="437" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/sections/signin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="494" selection-end="989" vertical-scroll-proportion="0.4328018" vertical-offset="0" max-vertical-offset="878">
-          <folding />
-        </state>
+        <state line="20" column="0" selection-start="494" selection-end="989" vertical-scroll-proportion="0.4328018" vertical-offset="0" max-vertical-offset="878" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/sections/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="67" selection-start="909" selection-end="909" vertical-scroll-proportion="-19.703703" vertical-offset="0" max-vertical-offset="798">
-          <folding />
-        </state>
+        <state line="28" column="67" selection-start="909" selection-end="909" vertical-scroll-proportion="-19.703703" vertical-offset="0" max-vertical-offset="798" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/register_form.html">
@@ -911,13 +902,6 @@
     <entry file="file://$PROJECT_DIR$/SMSReminder/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="5" selection-start="644" selection-end="644" vertical-scroll-proportion="0.34545454" vertical-offset="0" max-vertical-offset="880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user_dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="0" selection-start="3233" selection-end="3416" vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="2489">
           <folding />
         </state>
       </provider>
@@ -945,30 +929,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/base/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="7" selection-start="921" selection-end="921" vertical-scroll-proportion="-3.5185184" vertical-offset="171" max-vertical-offset="1406">
-          <folding />
-        </state>
+        <state line="14" column="7" selection-start="921" selection-end="921" vertical-scroll-proportion="-3.5185184" vertical-offset="171" max-vertical-offset="1406" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="29" selection-start="850" selection-end="850" vertical-scroll-proportion="-21.814816" vertical-offset="0" max-vertical-offset="931">
-          <folding />
-        </state>
+        <state line="31" column="29" selection-start="850" selection-end="850" vertical-scroll-proportion="-21.814816" vertical-offset="0" max-vertical-offset="931" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="32" selection-start="1514" selection-end="1514" vertical-scroll-proportion="0.4783599" vertical-offset="169" max-vertical-offset="1178">
-          <folding />
-        </state>
+        <state line="31" column="32" selection-start="1514" selection-end="1514" vertical-scroll-proportion="0.4783599" vertical-offset="169" max-vertical-offset="1178" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/base/messages.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="14" selection-start="303" selection-end="303" vertical-scroll-proportion="-4.2222223" vertical-offset="0" max-vertical-offset="399">
-          <folding />
-        </state>
+        <state line="6" column="14" selection-start="303" selection-end="303" vertical-scroll-proportion="-4.2222223" vertical-offset="0" max-vertical-offset="399" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user_menu.html">
@@ -985,34 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMSApp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="46" selection-start="956" selection-end="956" vertical-scroll-proportion="-13.68" vertical-offset="0" max-vertical-offset="874">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/add_contact_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="38" selection-start="486" selection-end="486" vertical-scroll-proportion="-2.5487804" vertical-offset="0" max-vertical-offset="779">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SMSApp/static/SMSApp/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="46" selection-start="2965" selection-end="2965" vertical-scroll-proportion="-16.384615" vertical-offset="1341" max-vertical-offset="2451">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/edit_contact_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="60" selection-start="654" selection-end="654" vertical-scroll-proportion="-3.2439024" vertical-offset="0" max-vertical-offset="779">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/static/SMSApp/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="22" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8664">
@@ -1020,39 +968,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/message_contact_form.html">
+    <entry file="file://$PROJECT_DIR$/SMSApp/static/SMSApp/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="2148" selection-end="2148" vertical-scroll-proportion="3.097561" vertical-offset="1014" max-vertical-offset="1824">
+        <state line="38" column="25" selection-start="1188" selection-end="1204" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="2451">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMSApp/views.py">
+    <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/message_contact_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="116" selection-start="2322" selection-end="2322" vertical-scroll-proportion="-6.65" vertical-offset="228" max-vertical-offset="8531">
+        <state line="25" column="38" selection-start="1198" selection-end="1198" vertical-scroll-proportion="-17.592592" vertical-offset="0" max-vertical-offset="1824">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMSApp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="14" selection-start="551" selection-end="551" vertical-scroll-proportion="-6.84" vertical-offset="0" max-vertical-offset="893">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="0" selection-start="6286" selection-end="6286" vertical-scroll-proportion="-31.64" vertical-offset="2173" max-vertical-offset="3078">
+        <state line="128" column="67" selection-start="4957" selection-end="4957" vertical-scroll-proportion="-28.88" vertical-offset="1710" max-vertical-offset="3344">
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/add_contact_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="202" selection-end="202" vertical-scroll-proportion="-4.2222223" vertical-offset="0" max-vertical-offset="798">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/edit_contact_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1714" selection-end="1714" vertical-scroll-proportion="-26.037037" vertical-offset="0" max-vertical-offset="817">
+          <folding>
+            <marker date="1400546075265" expanded="true" signature="142:1712" placeholder="..." />
+            <marker date="1400546075265" expanded="true" signature="379:588" placeholder="..." />
+            <marker date="1400546075265" expanded="true" signature="627:833" placeholder="..." />
+            <marker date="1400546075265" expanded="true" signature="872:1087" placeholder="..." />
+            <marker date="1400546075265" expanded="true" signature="1126:1326" placeholder="..." />
+            <marker date="1400546075265" expanded="true" signature="1365:1552" placeholder="..." />
+            <marker date="1400546075265" expanded="true" signature="1570:1694" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1731" selection-end="1731" vertical-scroll-proportion="-26.6" vertical-offset="0" max-vertical-offset="798">
+        <state line="27" column="31" selection-start="1254" selection-end="1281" vertical-scroll-proportion="-20.52" vertical-offset="0" max-vertical-offset="798">
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SMSApp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="337" column="23" selection-start="15268" selection-end="15268" vertical-scroll-proportion="-5.117647" vertical-offset="5686" max-vertical-offset="8892">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user_dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="32" selection-start="3106" selection-end="3106" vertical-scroll-proportion="-57.0" vertical-offset="0" max-vertical-offset="2470">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/forms/user_reminder_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="35" selection-start="3267" selection-end="3267" vertical-scroll-proportion="-8.444445" vertical-offset="969" max-vertical-offset="2717">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SMSApp/templates/SMSApp/user/user_contacts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="7" selection-start="6389" selection-end="6389" vertical-scroll-proportion="0.47914183" vertical-offset="2315" max-vertical-offset="3287">
+        <state line="117" column="4" selection-start="5532" selection-end="5532" vertical-scroll-proportion="0.34841076" vertical-offset="1938" max-vertical-offset="4275">
           <folding />
         </state>
       </provider>
