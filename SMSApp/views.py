@@ -175,7 +175,7 @@ def signout_confirm(request):
     messages.add_message(request, messages.INFO, 'You have been successfully logged out.')
     return redirect('index')
   
-def smsconfirm(request, source="index"):
+def smsconfirm(request):
     if request.method == 'POST': # If the form has been submitted...
         # ContactForm was defined in the the previous section
         form = ReminderForm(request.POST) # A form bound to the POST data
@@ -205,10 +205,7 @@ def smsconfirm(request, source="index"):
             if not BlackList.objects.filter(number=phone_number):
               queueMessage(request.user, phone_number, message, time, network)
               messages.add_message(request, messages.INFO, 'Your message has been created!')
-              if source =="index":
-                return redirect('index')
-              else:
-                return redirect(source, request.user)
+              return redirect(request.META.get('HTTP_REFERER', None), request.user)
 
             else:
                 messages.add_message(request, messages.ERROR, 'This number has been blacklisted.')
@@ -377,7 +374,8 @@ def user_dashboard(request, username):
         messages = Message.objects.all().filter(user=request.user, sent=False, cancelled = False)[:5]
         sentmessages = Message.objects.all().filter(user=request.user, sent=True, cancelled = False)[:5]
         friends = Friends.objects.filter(user=user).order_by('last_message')[:4]
-        context = {'pagetype': 'dashboard','form':form, 'profile':profile, 'sentmessages':sentmessages, 'messagequeue':messages, 'friends':friends}
+        msgform = ReminderForm()
+        context = {'pagetype': 'dashboard','form':form, 'profile':profile, 'sentmessages':sentmessages,'msgform':msgform, 'messagequeue':messages, 'friends':friends}
         return render(request, 'SMSApp/user/user.html', context)
     else:
         raise Http404

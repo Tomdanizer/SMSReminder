@@ -142,7 +142,7 @@
         }
     })
     $('.glyphicon-envelope').on('shown.bs.popover', function(){
-        dateHander();
+        dateHandler();
 
                 var contactItem = $(this).parents('.contact-item'),
                 phonenumber = contactItem.data("number"),
@@ -182,7 +182,7 @@
         $('#contact_search_url').attr("href",contactSearchUrl + this.value );
     });
 
-    var dateHander = function(){
+    var dateHandler = function(){
         var datepicker = $('.contactdatetimepicker')
         datepicker.datetimepicker();
           $("#remind_me_submit").click(function(e){

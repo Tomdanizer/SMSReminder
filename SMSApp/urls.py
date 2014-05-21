@@ -6,7 +6,6 @@ urlpatterns = patterns('',
     # GENERIC INDEX URLS
     url(r'^$', views.index, name='index'),
     url(r'^submitsms/$', views.smsconfirm, name='smsconfirm'),
-    url(r'^submitsms/(?P<source>\w+)/$', views.smsconfirm, name='smsconfirm_source'),
     url(r'^blocknumber/$', views.blocknumber, name='blocknumber'),
     url(r'^blocknumber_confirm/$', views.blocknumber_confirm, name='blacklist'),
 

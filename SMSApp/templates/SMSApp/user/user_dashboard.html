@@ -97,12 +97,16 @@
                 <div class="panel-body">
                     {% if friends %}
                         {% for friend in friends %}
-                            <li class="contact-item">
+                            <li class="contact-item" data-uuid='{{ friend.uuid }}' data-first='{{ friend.first_name }}' data-last='{{ friend.last_name }}' data-number='{{ friend.phone_number }}' data-network='{{ friend.network }}' data-favorite='{{ friend.favorite }}'>
                                 <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
                                     <div class="panel panel-info {% if friend.favorite == True %}favorite {% endif %}">
                                         <div class="panel-heading ">
                                             <div class="panel-title">{{ friend.first_name }} {{ friend.last_name }} - {{ friend.last_messaged }}
-                                                <span class="glyphicon glyphicon-envelope contact-icon"></span>
+                                                {% if friend.favorite == True %}
+                                                    <span class="glyphicon glyphicon-star contact-icon"></span>
+                                                {% else %}
+                                                    <span class="glyphicon glyphicon-star-empty contact-icon"></span>
+                                                {% endif %}
                                             </div>
                                         </div>
                                         <div class="panel-body">

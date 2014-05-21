@@ -49,7 +49,7 @@ def email_Reminder(id, msg, phone, network):
         email = EmailMessage('SMSReminder', msg, to=[phone+'@txt.att.net'])
     else:
         email = EmailMessage('SMSReminder', msg, to=[phone + '@' + network])
-    #email.send()
+    email.send()
     print id
 
     print Message.objects.filter(id = id).update(sent=True)
