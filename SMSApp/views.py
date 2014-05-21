@@ -294,7 +294,7 @@ def register_confirm(request):
               if user.is_active:
                 login(request, user)
                 messages.add_message(request, messages.INFO, 'You have been successfully registered.')
-                return redirect('index')
+                return redirect('user_dashboard', request.user)
               else:
                 messages.add_message(request, messages.ERROR, 'We were unable to signin your account.')
                 return redirect('index')
