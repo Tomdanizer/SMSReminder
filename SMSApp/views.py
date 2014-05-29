@@ -51,7 +51,7 @@ def about(request):
 def add_contact(request):
     if request.method == 'POST': # If the form has been submitted...
         # ContactForm was defined in the the previous section
-        addform = AddContactForm(request.POST) # A form bound to the POST data
+        form = AddContactForm(request.POST) # A form bound to the POST data
 
 
         user = request.user
@@ -71,7 +71,7 @@ def add_contact(request):
             friends = Friends.objects.filter(user=user)
             profile = get_object_or_404(SMSUser, username=user)
             messages.add_message(request, messages.ERROR, 'Invalid form. Please make sure all fields are filled out and try again.')
-            context = {'pagetype': 'contacts', 'profile':profile, 'addform':addform, 'friends':friends}
+            context = {'pagetype': 'contacts', 'profile':profile, 'addform':form, 'friends':friends}
             return render(request, 'SMSApp/user/user.html', context)
     else:
         messages.add_message(request, messages.ERROR, 'There was an issue with your request. Please try again.')
