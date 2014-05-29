@@ -147,7 +147,6 @@ class AddContactForm(forms.Form):
 
     def clean(self):
         first_name = self.cleaned_data.get('first_name')
-        last_name = self.cleaned_data.get('last_name')
         phone_number = self.cleaned_data.get('phone_number')
         network = self.cleaned_data.get('network')
         favorite = self.cleaned_data.get('favorite')

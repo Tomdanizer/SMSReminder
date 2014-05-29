@@ -17,12 +17,12 @@
                     {{ err }}
                     {% endfor %}
                   </label>
-                {{ form.phone_number|attr:"type:tel" |attr:"placeholder:(888) 123-4567   or   888-123-4567   or   888 123 4567   or   8881234567"|add_class:"form-control" }}
+                {{ form.phone_number|attr:"type:tel" |attr:"placeholder:888-123-4567   or   8881234567"|add_class:"form-control" }}
                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
                 </div>
               {% else %}
                 <label for="phone_number">Step 1: Phone Number</label>
-                {{ form.phone_number|attr:"type:tel" |attr:"placeholder:(888) 123-4567   or   888-123-4567   or   888 123 4567   or   8881234567"|add_class:"form-control" }}
+                {{ form.phone_number|attr:"type:tel" |attr:"placeholder:888-123-4567   or   8881234567 "|add_class:"form-control" }}
               {% endif %}
             </div>
 
@@ -37,9 +37,9 @@
                     {% endfor %}
                   </label>
                   <div id='datetimepicker' class='input-group date ' data-date-format="YYYY-MM-DD hh:mm A">
-                    {{ form.date2|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"form-control" }}                       <span class="input-group-addon "><span class="glyphicon glyphicon-calendar"></span></span>
+                    {{ form.date2|attr:"type:text" |attr:"placeholder: now  or  in 25 minutes"|add_class:"form-control" }}                       <span class="input-group-addon "><span class="glyphicon glyphicon-calendar"></span></span>
                   </div>
-                {{ form.date|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"hidden form-control" }}
+                {{ form.date|attr:"type:text" |attr:"placeholder: now  or  in 25 minutes"|add_class:"hidden form-control" }}
                   <span id="date-field-error" class="glyphicon glyphicon-remove form-control-feedback"></span>
                 </div>
 
@@ -47,12 +47,12 @@
 
                 <label for="date">Step 2: Date</label>
                   <div id='datetimepicker' class='input-group date' data-date-format="YYYY-MM-DD hh:mm A">
-                    {{ form.date2|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"form-control" }}                    <span class="input-group-addon">
+                    {{ form.date2|attr:"type:text" |attr:"placeholder: now  or  in 25 minutes"|add_class:"form-control" }}                    <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar">
                         </span>
                     </span>
                   </div>
-                    {{ form.date|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"hidden form-control" }}
+                    {{ form.date|attr:"type:text" |attr:"placeholder: now  or  in 25 minutes"|add_class:"hidden form-control" }}
               {% endif %}
             </div>
 
@@ -65,12 +65,12 @@
                     {{ err }}
                     {% endfor %}
                   </label>
-                {{ form.message|attr:"type:text" |attr:"placeholder:  Bury grandma at 1pm"|add_class:"form-control" }}
+                {{ form.message|attr:"type:text" |attr:"placeholder:Pick up Bob at train station"|add_class:"form-control" }}
                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
                 </div>
               {% else %}
                 <label for="message">Step 3: Message</label>
-                {{ form.message|attr:"type:text" |attr:"placeholder:  Bury grandma at 1pm"|add_class:"form-control" }}
+                {{ form.message|attr:"type:text" |attr:"placeholder:Pick up Bob at train station"|add_class:"form-control" }}
               {% endif %}
             </div>
 

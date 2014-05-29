@@ -14,11 +14,11 @@
                     {% for err in msgform.phone_number.errors %}
                     {{ err }}
                     {% endfor %}
-                {{ msgform.phone_number|attr:"type:tel" |attr:"placeholder:(888) 123-4567   or   888-123-4567   or   888 123 4567   or   8881234567"|add_class:"hidden form-control" }}
+                {{ msgform.phone_number|attr:"type:tel" |attr:"placeholder:888-123-4567   or   8881234567"|add_class:"hidden form-control" }}
                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
                 </div>
               {% else %}
-                {{ msgform.phone_number|attr:"type:tel" |attr:"placeholder:(888) 123-4567   or   888-123-4567   or   888 123 4567   or   8881234567"|add_class:"hidden form-control" }}
+                {{ msgform.phone_number|attr:"type:tel" |attr:"placeholder:888-123-4567   or   8881234567"|add_class:"hidden form-control" }}
               {% endif %}
             </div>
 
@@ -33,9 +33,9 @@
                     {% endfor %}
                   </label>
                   <div class='contactdatetimepicker input-group date ' data-date-format="YYYY-MM-DD hh:mm A">
-                    {{ msgform.date2|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"form-control" }}                       <span class="input-group-addon "><span class="glyphicon glyphicon-calendar"></span></span>
+                    {{ msgform.date2|attr:"type:text" |attr:"placeholder: now  or  in 25 minutes"|add_class:"form-control" }}                       <span class="input-group-addon "><span class="glyphicon glyphicon-calendar"></span></span>
                   </div>
-                {{ msgform.date|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"hidden form-control" }}
+                {{ msgform.date|attr:"type:text" |attr:"placeholder: now  or  in 25 minutes"|add_class:"hidden form-control" }}
                   <span id="date-field-error" class="glyphicon glyphicon-remove form-control-feedback"></span>
                 </div>
 
@@ -43,12 +43,12 @@
 
                 <label for="date">Step 1: Date</label>
                   <div  class='contactdatetimepicker input-group date' data-date-format="YYYY-MM-DD hh:mm A">
-                    {{ msgform.date2|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"form-control" }}                    <span class="input-group-addon">
+                    {{ msgform.date2|attr:"type:text" |attr:"placeholder: now  or  in 25 minutes"|add_class:"form-control" }}                    <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar">
                         </span>
                     </span>
                   </div>
-                    {{ msgform.date|attr:"type:text" |attr:"placeholder: today 3pm   or   3pm   or  tomorrow 3pm"|add_class:"hidden form-control" }}
+                    {{ msgform.date|attr:"type:text" |attr:"placeholder: now  or  in 25 minutes"|add_class:"hidden form-control" }}
               {% endif %}
             </div>
 
@@ -61,12 +61,12 @@
                     {{ err }}
                     {% endfor %}
                   </label>
-                {{ msgform.message|attr:"type:text" |attr:"placeholder:  Bury grandma at 1pm"|add_class:"form-control" }}
+                {{ msgform.message|attr:"type:text" |attr:"placeholder:Pick up Bob"|add_class:"form-control" }}
                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
                 </div>
               {% else %}
                 <label for="message">Step 2: Message</label>
-                {{ msgform.message|attr:"type:text" |attr:"placeholder:  Bury grandma at 1pm"|add_class:"form-control" }}
+                {{ msgform.message|attr:"type:text" |attr:"placeholder:Pick up Bob"|add_class:"form-control" }}
               {% endif %}
             </div>
 
