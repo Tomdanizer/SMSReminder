@@ -28,7 +28,7 @@ MESSAGE_TAGS = {message_constants.DEBUG: 'debug',
                 message_constants.ERROR: 'danger',}
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 INTERNAL_IPS = ('108.203.64.165','127.0.0.1','0.0.0.0','192.168.196.1')
 DEBUG_TOOLBAR_CONFIG = {'INTERCEPT_REDIRECTS': False,}
 TEMPLATE_DEBUG = False
