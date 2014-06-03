@@ -9,7 +9,7 @@ SMSReminder is a sms text reminder app whose purpose is to allow for quick simpl
  * MySQL ( postgresql on heroku )
  * Celery task queue with RabbitMQ as the message broker running on AWS. 
  * [parsedatetime module](https://github.com/bear/parsedatetime)
- * 
+
 ### Frontend
  * HTML
  * CSS
