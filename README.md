@@ -8,7 +8,7 @@ SMSReminder is a sms text reminder app whose purpose is to allow for quick simpl
  * Python
  * MySQL ( postgresql on heroku )
  * Celery task queue with RabbitMQ as the message broker running on AWS. 
- * 
+
 ### Frontend
  * HTML
  * JQuery
